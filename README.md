@@ -1,4 +1,6 @@
-Google Tag Manager (noscript)End Google Tag Manager (noscript)[](https://api.coin.z.com/docs/en/?rust#)[]()[Crypto](https://api.coin.z.com/docs/en/#outline)[Forex](https://api.coin.z.com/fxdocs/en/#outline)[NAV](https://api.coin.z.com/docs/en/?rust#)[Node.js](https://api.coin.z.com/docs/en/?rust#)[Python](https://api.coin.z.com/docs/en/?rust#)[Go](https://api.coin.z.com/docs/en/?rust#)[Ruby](https://api.coin.z.com/docs/en/?rust#)[PHP](https://api.coin.z.com/docs/en/?rust#)[Kotlin](https://api.coin.z.com/docs/en/?rust#)[C#](https://api.coin.z.com/docs/en/?rust#)[Rust](https://api.coin.z.com/docs/en/?rust#)[Haskell](https://api.coin.z.com/docs/en/?rust#)[Swift](https://api.coin.z.com/docs/en/?rust#)- [Introduction](https://api.coin.z.com/docs/en/?rust#outline)- [Endpoint](https://api.coin.z.com/docs/en/?rust#end-point)
+Google Tag Manager (noscript)End Google Tag Manager (
+noscript)[](https://api.coin.z.com/docs/en/?rust#)[]()[Crypto](https://api.coin.z.com/docs/en/#outline)[Forex](https://api.coin.z.com/fxdocs/en/#outline)[NAV](https://api.coin.z.com/docs/en/?rust#)[Node.js](https://api.coin.z.com/docs/en/?rust#)[Python](https://api.coin.z.com/docs/en/?rust#)[Go](https://api.coin.z.com/docs/en/?rust#)[Ruby](https://api.coin.z.com/docs/en/?rust#)[PHP](https://api.coin.z.com/docs/en/?rust#)[Kotlin](https://api.coin.z.com/docs/en/?rust#)[C#](https://api.coin.z.com/docs/en/?rust#)[Rust](https://api.coin.z.com/docs/en/?rust#)[Haskell](https://api.coin.z.com/docs/en/?rust#)[Swift](https://api.coin.z.com/docs/en/?rust#)- [Introduction](https://api.coin.z.com/docs/en/?rust#outline)- [Endpoint](https://api.coin.z.com/docs/en/?rust#end-point)
+
 - [Version](https://api.coin.z.com/docs/en/?rust#version)
 - [API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)
 
@@ -143,53 +145,65 @@ Google Tag Manager (noscript)End Google Tag Manager (noscript)[](https://api.coi
 
 # Introduction
 
-GMO Coin provides a Public API that does not require authentication and a Private API that requires authentication using an API key.- All requests from the client to the API are[HTTPS](https://en.wikipedia.org/wiki/HTTPS)communication.
+GMO Coin provides a Public API that does not require authentication and a Private API that requires authentication using
+an API key.- All requests from the client to the API are[HTTPS](https://en.wikipedia.org/wiki/HTTPS)communication.
+
 - Only Spot and Margin trading are supported.
+
 ```
 
 //Request examples are tested with Node.js v21.0.0.
 
 ```
+
 ```
 
 #Request examples are tested with Python 3.12.0.
 
 ```
+
 ```
 
 //Request examples are tested with Go 1.21.3.
 
 ```
+
 ```
 
 #Request examples are tested with Ruby 3.2.2.
 
 ```
+
 ```
 
 //Request examples are tested with Kotlin 1.9.10.
 
 ```
+
 ```
 <?php
 //Request examples are tested with PHP 8.2.11.
 
 ```
+
 ```
 
 //Request examples are tested with rustc 1.73.0.
 
 ```
+
 ```
 
 --Request examples are tested with ghc 9.8.1.
 
 ```
+
 ```
 
 //Request examples are tested with .NET Framework 8.0.1.
 
 ```
+
 ```
 
 //Request examples are tested with Swift 5.8.1.
@@ -215,21 +229,29 @@ API usage Limits are below:##### Public WebSocket API Limiting
 
 - Current week's private API limits are based on the trading volume from the previous week.
 - Private API's limits are subject to change without prior notice.
-- If you enable the IP restriction feature on the membership site, it will deny any API calling that comes from a non-registered IP.
+- If you enable the IP restriction feature on the membership site, it will deny any API calling that comes from a
+  non-registered IP.
 - Only features that are specified on the membership site when API key was issued can be called.
-| Level | Volume | API limits | Description |
-| --- | --- | --- | --- |
-| Tier 1 | Last week trading volume < 1,000,000,000yen | 20req/s | Maximum 20 GET requests per second.Maximum 20 POST requests per second. |
-| Tier 2 | Last week trading volume >= 1,000,000,000yen | 30req/s | Maximum 30 GET requests per second.Maximum 30 POST requests per second. |
-*Trading volume targets spot trading and margin trading of exchange.*Trading volume data will be collected between past Sunday 6:00 and current Sunday 5:59 JST.*Tier will be updated every Sunday between 6:00 - 6:30 JST.##### Private WebSocket API Limiting
+  | Level | Volume | API limits | Description |
+  | --- | --- | --- | --- |
+  | Tier 1 | Last week trading volume < 1,000,000,000yen | 20req/s | Maximum 20 GET requests per second.Maximum 20 POST
+  requests per second. |
+  | Tier 2 | Last week trading volume >= 1,000,000,000yen | 30req/s | Maximum 30 GET requests per second.Maximum 30 POST
+  requests per second. |
+  *Trading volume targets spot trading and margin trading of exchange.*Trading volume data will be collected between
+  past Sunday 6:00 and current Sunday 5:59 JST.*Tier will be updated every Sunday between 6:00 - 6:30 JST.##### Private
+  WebSocket API Limiting
 
 - Private WebSocket API is limited to maximum 1 request (subscribe/unsubscribe) per second for each IP address.
-- If you enable the IP restriction feature on the membership site, it will deny any API calling that comes from a non-registered IP.
+- If you enable the IP restriction feature on the membership site, it will deny any API calling that comes from a
+  non-registered IP.
 - Only features specified at the time of issuing the API key can be subscribed.
 
 ##### Other
 
-We may restrict API usage due to any of the following reasons.- To automatically limit the flow rate when our entire system experiences overload.
+We may restrict API usage due to any of the following reasons.- To automatically limit the flow rate when our entire
+system experiences overload.
+
 - We have determined the user's API usage may be causing an overload on our system.
 - We have determined that users are repeatedly placing orders to intentionally overload our system.
 
@@ -237,9 +259,11 @@ We may restrict API usage due to any of the following reasons.- To automatically
 
 If you don't have an account[Sign up for free](https://coin.z.com/jp/member/signup)# Creating API Keys
 
-After opening an account, you can create API keys from the membership site.When you create an API key, you can set a permission for each functionality.# Authentication
+After opening an account, you can create API keys from the membership site.When you create an API key, you can set a
+permission for each functionality.# Authentication
 
-Authentication is not required to callout the Public API. Public API functionalities are[here](https://api.coin.z.com/docs/en/?rust#public-api).## Private API
+Authentication is not required to callout the Public API. Public API functionalities
+are[here](https://api.coin.z.com/docs/en/?rust#public-api).## Private API
 
 ```
 const axios  = require('axios');
@@ -273,6 +297,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -304,6 +329,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (res.json())
 
 ```
+
 ```
 package main
 
@@ -349,6 +375,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -383,6 +410,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -425,6 +453,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -458,6 +487,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -513,6 +543,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -575,6 +606,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -636,6 +668,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -710,18 +743,25 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
-HTTP header requires to include information with using API key and API secret below:- API-KEY: Access key that is issued on the membership site
+
+HTTP header requires to include information with using API key and API secret below:- API-KEY: Access key that is issued
+on the membership site
+
 - API-TIMESTAMP: The request's Unix Timestamp
 - API-SIGN: Signature generated for each request with the following method
 
 ##### Signature Generation
 
-You can generate the signature by signing a concatenated string of the request's Unix Timestamp (milliseconds), the HTTP method, the request path, and the request body with your API secret key using the HMAC-SHA256 algorithm. Please pay special attention to the following:- For GET requests, the request body must be an empty string.
+You can generate the signature by signing a concatenated string of the request's Unix Timestamp (milliseconds), the HTTP
+method, the request path, and the request body with your API secret key using the HMAC-SHA256 algorithm. Please pay
+special attention to the following:- For GET requests, the request body must be an empty string.
+
 - The request path must start with`/v1`and must not start with`/private`.
 
 ## Private WebSocket API
 
-Using a[Private API](https://api.coin.z.com/docs/en/?rust#ws-auth-post)to get an access token. The way of authentication for the Private API is the same as the other Private API.# Public API
+Using a[Private API](https://api.coin.z.com/docs/en/?rust#ws-auth-post)to get an access token. The way of authentication
+for the Private API is the same as the other Private API.# Public API
 
 ## Service Status
 
@@ -743,6 +783,7 @@ axios.get(endPoint + path)
   .finally(function () {});
 
 ```
+
 ```
 import requests
 import json
@@ -754,6 +795,7 @@ response = requests.get(endPoint + path)
 print(response.json())
 
 ```
+
 ```
 package main
 
@@ -777,6 +819,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'uri'
@@ -794,6 +837,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -817,6 +861,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -832,6 +877,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 extern crate reqwest;
 fn main() {
@@ -842,6 +888,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -858,6 +905,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -883,6 +931,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -916,6 +965,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -928,15 +978,16 @@ Response example:
 }
 
 ```
+
 Gets the service status of GMO Coin.##### Request
 
 `GET /public/v1/status`##### Parameters
 
 None##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| status | string | Service status:MAINTENANCEPREOPENOPEN |
+| Property Name | Value  | Description                           |
+|---------------|--------|---------------------------------------|
+| status        | string | Service status:MAINTENANCEPREOPENOPEN |
 
 ## Ticker
 
@@ -958,6 +1009,7 @@ axios.get(endPoint + path)
   .finally(function () {});
 
 ```
+
 ```
 import requests
 import json
@@ -969,6 +1021,7 @@ response = requests.get(endPoint + path)
 print(json.dumps(response.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -992,6 +1045,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'uri'
@@ -1009,6 +1063,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -1032,6 +1087,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -1047,6 +1103,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 extern crate reqwest;
 fn main() {
@@ -1057,6 +1114,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -1080,6 +1138,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -1105,6 +1164,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -1138,6 +1198,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -1159,20 +1220,22 @@ Response example:
 }
 
 ```
-Gets the latest rates of the specified symbol.If you want to get all symbols' rates, we recommend calling out it without a symbol.##### Request
+
+Gets the latest rates of the specified symbol.If you want to get all symbols' rates, we recommend calling out it without
+a symbol.##### Request
 
 `GET /public/v1/ticker`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Optional | If a symbol is not specified, returns all symbols' rates.The handling symbols arehere |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Optional | If a symbol is not specified, returns all symbols' rates.The handling symbols arehere |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| list.volume | string | Volume of trade in 24 hours. |
+| Property Name | Value  | Description                  |
+|---------------|--------|------------------------------|
+| list.volume   | string | Volume of trade in 24 hours. |
 
 ## Order Books
 
@@ -1192,6 +1255,7 @@ axios.get(endPoint + path)
   .finally(function () {});
 
 ```
+
 ```
 import requests
 import json
@@ -1203,6 +1267,7 @@ response = requests.get(endPoint + path)
 print(json.dumps(response.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -1226,6 +1291,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'uri'
@@ -1243,6 +1309,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -1266,6 +1333,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -1281,6 +1349,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 extern crate reqwest;
 fn main() {
@@ -1291,6 +1360,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -1314,6 +1384,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -1339,6 +1410,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -1372,6 +1444,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -1396,21 +1469,22 @@ Response example:
 }
 
 ```
+
 Gets an order book (snapshot) of the specified symbol.##### Request
 
 `GET /public/v1/orderbooks`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling symbols arehere |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling symbols arehere |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| asks | array | Information of sell orders in ascending order of price. |
-| bids | array | Information of buy orders in descending order of price. |
+| Property Name | Value | Description                                             |
+|---------------|-------|---------------------------------------------------------|
+| asks          | array | Information of sell orders in ascending order of price. |
+| bids          | array | Information of buy orders in descending order of price. |
 
 ## Trade History
 
@@ -1432,6 +1506,7 @@ axios.get(endPoint + path)
   .finally(function () {});
 
 ```
+
 ```
 import requests
 import json
@@ -1443,6 +1518,7 @@ response = requests.get(endPoint + path)
 print(json.dumps(response.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -1466,6 +1542,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'uri'
@@ -1483,6 +1560,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -1506,6 +1584,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -1521,6 +1600,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 extern crate reqwest;
 fn main() {
@@ -1531,6 +1611,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -1554,6 +1635,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -1579,6 +1661,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -1612,6 +1695,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -1635,25 +1719,27 @@ Response example:
 }
 
 ```
+
 Gets the trade history in descending order of timestamp for a specified symbol.##### Request
 
 `GET /public/v1/trades`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling symbols arehere |
-| page | number | Optional | Target page: If a page is not specified, it will run assuming 1 is set. |
-| count | number | Optional | Number of items that you want to get in 1 page: If a count is not specified, it will run assuming 100 (maximum value) is set. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling symbols arehere |
+  | page | number | Optional | Target page: If a page is not specified, it will run assuming 1 is set. |
+  | count | number | Optional | Number of items that you want to get in 1 page: If a count is not specified, it will run
+  assuming 100 (maximum value) is set. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| price | string | Executed price |
-| side | string | Side:BUYSELL |
-| size | string | Executed quantity |
-| timestamp | string | Executed timestamp |
+| Property Name | Value  | Description        |
+|---------------|--------|--------------------|
+| price         | string | Executed price     |
+| side          | string | Side:BUYSELL       |
+| size          | string | Executed quantity  |
+| timestamp     | string | Executed timestamp |
 
 ## KLine Data
 
@@ -1675,6 +1761,7 @@ axios.get(endPoint + path)
   .finally(function () {});
 
 ```
+
 ```
 import requests
 import json
@@ -1686,6 +1773,7 @@ response = requests.get(endPoint + path)
 print(json.dumps(response.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -1709,6 +1797,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'uri'
@@ -1726,6 +1815,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -1749,6 +1839,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -1764,6 +1855,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 extern crate reqwest;
 fn main() {
@@ -1774,6 +1866,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -1797,6 +1890,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -1822,6 +1916,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -1855,6 +1950,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -1882,27 +1978,31 @@ Response example:
 }
 
 ```
+
 Gets a market's OHLCV candlestick data (sorted by start time in ascending order) of the specified symbol.##### Request
 
 `GET /public/v1/klines`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling symbols arehere |
-| interval | string | Required | 1min5min10min15min30min1hour4hour8hour12hour1day1week1month |
-| date | string | Required | Acceptable data formats:YYYYMMDDYYYYIfYYYYMMDD, the following interval values are supported:1min5min10min15min30min1hour*The date should be equal to or after 20210415. Date will be renewed at JST 6:00.IfYYYY, the following interval values are supported:4hour8hour12hour1day1week1month*The date should be equal to or after the release date of each symbol. The release date ishere. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling symbols arehere |
+  | interval | string | Required | 1min5min10min15min30min1hour4hour8hour12hour1day1week1month |
+  | date | string | Required | Acceptable data formats:YYYYMMDDYYYYIfYYYYMMDD, the following interval values are
+  supported:1min5min10min15min30min1hour*The date should be equal to or after 20210415. Date will be renewed at JST 6:
+  00.IfYYYY, the following interval values are supported:4hour8hour12hour1day1week1month*The date should be equal to or
+  after the release date of each symbol. The release date ishere. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| openTime | string | Start unix timestamp(milliseconds) |
-| open | string | Open price |
-| high | string | High price |
-| low | string | Low price |
-| close | string | Close price |
-| volume | string | Volume of trade |
+| Property Name | Value  | Description                        |
+|---------------|--------|------------------------------------|
+| openTime      | string | Start unix timestamp(milliseconds) |
+| open          | string | Open price                         |
+| high          | string | High price                         |
+| low           | string | Low price                          |
+| close         | string | Close price                        |
+| volume        | string | Volume of trade                    |
 
 ## Trade rules
 
@@ -1924,6 +2024,7 @@ axios.get(endPoint + path)
   .finally(function () {});
 
 ```
+
 ```
 import requests
 import json
@@ -1935,6 +2036,7 @@ response = requests.get(endPoint + path)
 print(json.dumps(response.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -1958,6 +2060,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'uri'
@@ -1975,6 +2078,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -1998,6 +2102,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -2013,6 +2118,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 extern crate reqwest;
 fn main() {
@@ -2023,6 +2129,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -2045,6 +2152,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -2070,6 +2178,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -2103,6 +2212,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -2132,25 +2242,27 @@ Response example:
 }
 
 ```
+
 Gets trade rules.##### Request
 
 `GET /public/v1/symbols`##### Parameters
 
 None##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| symbol | string | The handling symbols arehere |
-| minOrderSize | string | Minimum order amount |
-| maxOrderSize | string | Maximum order amount |
-| sizeStep | string | Minimum order value |
-| tickSize | string | Tick size |
-| takerFee | string | Taker Fee |
-| makerFee | string | Maker Fee |
+| Property Name | Value  | Description                  |
+|---------------|--------|------------------------------|
+| symbol        | string | The handling symbols arehere |
+| minOrderSize  | string | Minimum order amount         |
+| maxOrderSize  | string | Maximum order amount         |
+| sizeStep      | string | Minimum order value          |
+| tickSize      | string | Tick size                    |
+| takerFee      | string | Taker Fee                    |
+| makerFee      | string | Maker Fee                    |
 
 # Public WebSocket API
 
-- A ping will be sent from the server to a client once per minute. If there's no response (pong) from a client 3 consecutive times, then the WebSocket will be disconnected automatically.
+- A ping will be sent from the server to a client once per minute. If there's no response (pong) from a client 3
+  consecutive times, then the WebSocket will be disconnected automatically.
 
 ## Ticker
 
@@ -2175,6 +2287,7 @@ ws.on("message", (data) => {
 });
 
 ```
+
 ```
 import json
 import websocket
@@ -2199,6 +2312,7 @@ ws.on_message = on_message
 ws.run_forever()
 
 ```
+
 ```
 package main
 
@@ -2230,6 +2344,7 @@ func main() {
 }
 
 ```
+
 ```
 require "faye/websocket"
 require "eventmachine"
@@ -2253,6 +2368,7 @@ EM.run {
 }
 
 ```
+
 ```
 import io.ktor.client.HttpClient
 import io.ktor.client.features.websocket.WebSockets
@@ -2289,6 +2405,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -2319,6 +2436,7 @@ $connector("wss://api.coin.z.com/ws/public/v1")->then(function (Ratchet\Client\W
 $loop->run();
 
 ```
+
 ```
 extern crate tungstenite;
 extern crate url;
@@ -2340,6 +2458,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -2375,6 +2494,7 @@ main :: IO ()
 main = withSocketsDo $ WSS.runSecureClient "api.coin.z.com" 443 "/ws/public/v1" app
 
 ```
+
 ```
 using System;
 using System.Net.WebSockets;
@@ -2443,6 +2563,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -2499,6 +2620,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -2515,28 +2637,30 @@ Response example:
 }
 
 ```
+
 Gets the latest rates of the specified symbol.After[subscribe](), tickers start to be sent.##### Parameters
 
 - Parameter type: JSON
-| Property Name | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| command | string | Required | subscribeunsubscribe |
-| channel | string | Required | ticker |
-| symbol | string | Required | The handling symbols arehere |
+  | Property Name | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | command | string | Required | subscribeunsubscribe |
+  | channel | string | Required | ticker |
+  | symbol | string | Required | The handling symbols arehere |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| channel | string | ticker |
-| ask | string | The best indicative price in the current selling orders. |
-| bid | string | The best indicative price in the current buying orders. |
-| high | string | The highest trading price of the day. |
-| last | string | The latest trading price. |
-| low | string | The lowest trading price of the day. |
-| symbol | string | The handling symbols arehere |
-| timestamp | string | Executed timestamp. |
-| volume | string | Volume of trade in 24 hours. |
+| Property Name | Value  | Description                                              |
+|---------------|--------|----------------------------------------------------------|
+| channel       | string | ticker                                                   |
+| ask           | string | The best indicative price in the current selling orders. |
+| bid           | string | The best indicative price in the current buying orders.  |
+| high          | string | The highest trading price of the day.                    |
+| last          | string | The latest trading price.                                |
+| low           | string | The lowest trading price of the day.                     |
+| symbol        | string | The handling symbols arehere                             |
+| timestamp     | string | Executed timestamp.                                      |
+| volume        | string | Volume of trade in 24 hours.                             |
+
 - There is no Response when[unsubscribe]()is requested.
 
 ## Order Books
@@ -2562,6 +2686,7 @@ ws.on("message", (data) => {
 });
 
 ```
+
 ```
 import json
 import websocket
@@ -2586,6 +2711,7 @@ ws.on_message = on_message
 ws.run_forever()
 
 ```
+
 ```
 package main
 
@@ -2617,6 +2743,7 @@ func main() {
 }
 
 ```
+
 ```
 require "faye/websocket"
 require "eventmachine"
@@ -2640,6 +2767,7 @@ EM.run {
 }
 
 ```
+
 ```
 import io.ktor.client.HttpClient
 import io.ktor.client.features.websocket.WebSockets
@@ -2676,6 +2804,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -2706,6 +2835,7 @@ $connector("wss://api.coin.z.com/ws/public/v1")->then(function (Ratchet\Client\W
 $loop->run();
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -2729,6 +2859,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -2764,6 +2895,7 @@ main :: IO ()
 main = withSocketsDo $ WSS.runSecureClient "api.coin.z.com" 443 "/ws/public/v1" app
 
 ```
+
 ```
 using System;
 using System.Net.WebSockets;
@@ -2832,6 +2964,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -2888,6 +3021,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -2906,24 +3040,26 @@ Response example:
 }
 
 ```
+
 Gets an order book (snapshot) of the specified symbol.After[subscribe](), order books start to be sent.##### Parameters
 
 - Parameter type: JSON
-| Property Name | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| command | string | Required | subscribeunsubscribe |
-| channel | string | Required | orderbooks |
-| symbol | string | Required | The handling symbols arehere |
+  | Property Name | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | command | string | Required | subscribeunsubscribe |
+  | channel | string | Required | orderbooks |
+  | symbol | string | Required | The handling symbols arehere |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| channel | string | orderbooks |
-| asks | array | Information of sell orders in ascending order of price. |
-| bids | array | Information of buy orders in descending order of price. |
-| symbol | string | The handling symbols arehere |
-| timestamp | string | Timestamp of the orderbook. |
+| Property Name | Value  | Description                                             |
+|---------------|--------|---------------------------------------------------------|
+| channel       | string | orderbooks                                              |
+| asks          | array  | Information of sell orders in ascending order of price. |
+| bids          | array  | Information of buy orders in descending order of price. |
+| symbol        | string | The handling symbols arehere                            |
+| timestamp     | string | Timestamp of the orderbook.                             |
+
 - There is no Response when[unsubscribe]()is requested.
 
 ## Trades
@@ -2949,6 +3085,7 @@ ws.on("message", (data) => {
 });
 
 ```
+
 ```
 import json
 import websocket
@@ -2973,6 +3110,7 @@ ws.on_message = on_message
 ws.run_forever()
 
 ```
+
 ```
 package main
 
@@ -3004,6 +3142,7 @@ func main() {
 }
 
 ```
+
 ```
 require "faye/websocket"
 require "eventmachine"
@@ -3027,6 +3166,7 @@ EM.run {
 }
 
 ```
+
 ```
 import io.ktor.client.HttpClient
 import io.ktor.client.features.websocket.WebSockets
@@ -3063,6 +3203,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -3093,6 +3234,7 @@ $connector("wss://api.coin.z.com/ws/public/v1")->then(function (Ratchet\Client\W
 $loop->run();
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -3116,6 +3258,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -3151,6 +3294,7 @@ main :: IO ()
 main = withSocketsDo $ WSS.runSecureClient "api.coin.z.com" 443 "/ws/public/v1" app
 
 ```
+
 ```
 using System;
 using System.Net.WebSockets;
@@ -3219,6 +3363,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -3275,6 +3420,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -3288,26 +3434,29 @@ Response example:
 }
 
 ```
+
 Gets trade histories of the specified symbol.After[subscribe](), trade histories start to be sent.##### Parameters
 
 - Parameter type: JSON
-| Property Name | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| command | string | Required | subscribeunsubscribe |
-| channel | string | Required | trades |
-| symbol | string | Required | The handling symbols arehere |
-| option | string | Optional | TAKER_ONLY*Ifoptionis specified, it will sendtakerdata only.*If you request multiple trade subscriptions with the same symbol, only the latest request will be valid. |
+  | Property Name | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | command | string | Required | subscribeunsubscribe |
+  | channel | string | Required | trades |
+  | symbol | string | Required | The handling symbols arehere |
+  | option | string | Optional | TAKER_ONLY*Ifoptionis specified, it will sendtakerdata only.*If you request multiple
+  trade subscriptions with the same symbol, only the latest request will be valid. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| channel | string | trades |
-| price | string | Executed price |
-| side | string | Side:BUYSELL |
-| size | string | Executed quantity |
-| timestamp | string | Executed timestamp |
-| symbol | string | The handling symbols arehere |
+| Property Name | Value  | Description                  |
+|---------------|--------|------------------------------|
+| channel       | string | trades                       |
+| price         | string | Executed price               |
+| side          | string | Side:BUYSELL                 |
+| size          | string | Executed quantity            |
+| timestamp     | string | Executed timestamp           |
+| symbol        | string | The handling symbols arehere |
+
 - There is no Response when[unsubscribe]()is requested.
 
 # Private API
@@ -3347,6 +3496,7 @@ axios.get(endPoint + path, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -3376,6 +3526,7 @@ res = requests.get(endPoint + path, headers=headers)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -3419,6 +3570,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -3450,6 +3602,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -3489,6 +3642,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -3518,6 +3672,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -3569,6 +3724,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -3622,6 +3778,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -3679,6 +3836,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -3748,6 +3906,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -3766,21 +3925,22 @@ Response example:
 }
 
 ```
+
 Gets information of trading capacity.##### Request
 
 `GET /private/v1/account/margin`##### Parameters
 
 None##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| actualProfitLoss | string | The summary of the current evaluated amount |
-| availableAmount | string | Available amount |
-| margin | string | Used margin |
-| marginCallStatus | string | Marin call status:NORMALMARGIN_CALLLOSSCUT |
-| marginRatio | string | Maintenance margin ratio |
-| profitLoss | string | Appraisal profit or loss |
-| transferableAmount | string | Transferable amount |
+| Property Name      | Value  | Description                                 |
+|--------------------|--------|---------------------------------------------|
+| actualProfitLoss   | string | The summary of the current evaluated amount |
+| availableAmount    | string | Available amount                            |
+| margin             | string | Used margin                                 |
+| marginCallStatus   | string | Marin call status:NORMALMARGIN_CALLLOSSCUT  |
+| marginRatio        | string | Maintenance margin ratio                    |
+| profitLoss         | string | Appraisal profit or loss                    |
+| transferableAmount | string | Transferable amount                         |
 
 ## Assets
 
@@ -3817,6 +3977,7 @@ axios.get(endPoint + path, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -3846,6 +4007,7 @@ res = requests.get(endPoint + path, headers=headers)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -3889,6 +4051,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -3920,6 +4083,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -3959,6 +4123,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -3988,6 +4153,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -4039,6 +4205,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -4092,6 +4259,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -4149,6 +4317,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -4218,6 +4387,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -4241,18 +4411,19 @@ Response example:
 }
 
 ```
+
 Retrieves asset data.##### Request
 
 `GET /private/v1/account/assets`##### Parameters
 
 None##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| amount | string | Amount |
-| available | string | Available amount (Amount - Scheduled withdrawal amount) |
+| Property Name  | Value  | Description                                                                                                                                                                                                       |
+|----------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| amount         | string | Amount                                                                                                                                                                                                            |
+| available      | string | Available amount (Amount - Scheduled withdrawal amount)                                                                                                                                                           |
 | conversionRate | string | JPY conversion rate (It is the selling price in the OTC Spot Market. *If the symbol is not listed in the OTC Spot Market, the final execution price in the Spot Trading will be used as the JPY conversion rate.) |
-| symbol | string | Asset Ticker Symbol: The handling symbols arehere*Only symbols available on the exchange (Spot Trading) can be ordered by API.The handling symbols arehere |
+| symbol         | string | Asset Ticker Symbol: The handling symbols arehere*Only symbols available on the exchange (Spot Trading) can be ordered by API.The handling symbols arehere                                                        |
 
 ## Trading Volume
 
@@ -4289,6 +4460,7 @@ axios.get(endPoint + path, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -4318,6 +4490,7 @@ res = requests.get(endPoint + path, headers=headers)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -4361,6 +4534,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -4392,6 +4566,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -4431,6 +4606,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -4460,6 +4636,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -4511,6 +4688,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -4564,6 +4742,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -4621,6 +4800,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -4690,6 +4870,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -4718,22 +4899,23 @@ Response example:
 }
 
 ```
+
 Returns trading volume data.##### Request
 
 `GET /private/v1/account/tradingVolume`##### Parameters
 
 None##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| jpyVolume | string | Current week's trading volume (Japanese Yen) |
-| tierLevel | number | Currenttrading level:12 |
-| limit.symbol | string | The handling symbols arehere |
+| Property Name            | Value  | Description                                                               |
+|--------------------------|--------|---------------------------------------------------------------------------|
+| jpyVolume                | string | Current week's trading volume (Japanese Yen)                              |
+| tierLevel                | number | Currenttrading level:12                                                   |
+| limit.symbol             | string | The handling symbols arehere                                              |
 | limit.todayLimitOpenSize | string | Remaining size of maximum daily trading volume (Open)*Margin symbols only |
-| limit.todayLimitBuySize | string | Remaining size of maximum daily trading volume (Buy)*Spot symbols only |
-| limit.todayLimitSellSize | string | Remaining size of maximum daily trading volume (Sell)*Spot symbols only |
-| limit.takerFee | string | Taker Fee |
-| limit.makerFee | string | Maker Fee |
+| limit.todayLimitBuySize  | string | Remaining size of maximum daily trading volume (Buy)*Spot symbols only    |
+| limit.todayLimitSellSize | string | Remaining size of maximum daily trading volume (Sell)*Spot symbols only   |
+| limit.takerFee           | string | Taker Fee                                                                 |
+| limit.makerFee           | string | Maker Fee                                                                 |
 
 ## Fiat deposit history
 
@@ -4771,6 +4953,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -4801,6 +4984,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -4845,6 +5029,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -4880,6 +5065,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -4920,6 +5106,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -4950,6 +5137,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -5004,6 +5192,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -5058,6 +5247,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -5116,6 +5306,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -5186,6 +5377,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -5204,25 +5396,28 @@ Response example:
 }
 
 ```
+
 Returns JPY deposit history data.##### Request
 
 `GET /private/v1/account/fiatDeposit/history`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| fromTimestamp | string | Required | Start search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:00:00.000Z)* When only fromTimestamp is specified, toTimestamp will be 'fromTimestamp + 30 minutes'. |
-| toTimestamp | string | Optional | End search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:30:00.000Z)* The maximum difference between fromTimestamp and toTimestamp is 30 minutes. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | fromTimestamp | string | Required | Start search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:
+  00:00.000Z)* When only fromTimestamp is specified, toTimestamp will be 'fromTimestamp + 30 minutes'. |
+  | toTimestamp | string | Optional | End search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:30:
+  00.000Z)* The maximum difference between fromTimestamp and toTimestamp is 30 minutes. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| amount | string | amount |
-| fee | string | fee |
-| status | string | status:EXECUTED |
-| symbol | string | symbol:JPY |
-| timestamp | string | executed timestamp(UTC) |
+| Property Name | Value  | Description             |
+|---------------|--------|-------------------------|
+| amount        | string | amount                  |
+| fee           | string | fee                     |
+| status        | string | status:EXECUTED         |
+| symbol        | string | symbol:JPY              |
+| timestamp     | string | executed timestamp(UTC) |
 
 ## Fiat withdrawal history
 
@@ -5260,6 +5455,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -5290,6 +5486,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -5334,6 +5531,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -5369,6 +5567,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -5409,6 +5608,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -5439,6 +5639,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -5493,6 +5694,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -5547,6 +5749,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -5605,6 +5808,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -5675,6 +5879,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -5693,25 +5898,28 @@ Response example:
 }
 
 ```
+
 Returns JPY withdrawal history data。##### Request
 
 `GET /private/v1/account/fiatWithdrawal/history`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| fromTimestamp | string | Required | Start search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:00:00.000Z)* When only fromTimestamp is specified, toTimestamp will be 'fromTimestamp + 30 minutes'. |
-| toTimestamp | string | Optional | End search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:30:00.000Z)* The maximum difference between fromTimestamp and toTimestamp is 30 minutes. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | fromTimestamp | string | Required | Start search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:
+  00:00.000Z)* When only fromTimestamp is specified, toTimestamp will be 'fromTimestamp + 30 minutes'. |
+  | toTimestamp | string | Optional | End search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:30:
+  00.000Z)* The maximum difference between fromTimestamp and toTimestamp is 30 minutes. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| amount | string | amount |
-| fee | string | fee |
-| status | string | status:EXECUTED |
-| symbol | string | The handling symbols arehere:JPY |
-| timestamp | string | executed timestamp(UTC) |
+| Property Name | Value  | Description                      |
+|---------------|--------|----------------------------------|
+| amount        | string | amount                           |
+| fee           | string | fee                              |
+| status        | string | status:EXECUTED                  |
+| symbol        | string | The handling symbols arehere:JPY |
+| timestamp     | string | executed timestamp(UTC)          |
 
 ## CryptoCurrency deposit history
 
@@ -5749,6 +5957,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -5779,6 +5988,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -5823,6 +6033,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -5859,6 +6070,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -5899,6 +6111,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -5929,6 +6142,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -5985,6 +6199,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -6039,6 +6254,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -6097,6 +6313,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -6167,6 +6384,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -6186,28 +6404,31 @@ Response example:
 }
 
 ```
+
 Returns CryptoCurrency deposit history data.##### Request
 
 `GET /private/v1/account/deposit/history`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling symbols arehere |
-| fromTimestamp | string | Required | Start search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:00:00.000Z)* When only fromTimestamp is specified, toTimestamp will be 'fromTimestamp + 30 minutes'. |
-| toTimestamp | string | Optional | End search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:30:00.000Z)* The maximum difference between fromTimestamp and toTimestamp is 30 minutes. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling symbols arehere |
+  | fromTimestamp | string | Required | Start search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:
+  00:00.000Z)* When only fromTimestamp is specified, toTimestamp will be 'fromTimestamp + 30 minutes'. |
+  | toTimestamp | string | Optional | End search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:30:
+  00.000Z)* The maximum difference between fromTimestamp and toTimestamp is 30 minutes. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| address | string | address |
-| amount | string | amount |
-| fee | string | fee |
-| status | string | status:EXECUTED |
-| symbol | string | The handling symbols arehere |
-| timestamp | string | executed timestamp(UTC) |
-| txHash | string | transaction hash |
+| Property Name | Value  | Description                  |
+|---------------|--------|------------------------------|
+| address       | string | address                      |
+| amount        | string | amount                       |
+| fee           | string | fee                          |
+| status        | string | status:EXECUTED              |
+| symbol        | string | The handling symbols arehere |
+| timestamp     | string | executed timestamp(UTC)      |
+| txHash        | string | transaction hash             |
 
 ## CryptoCurrency withdrawal history
 
@@ -6245,6 +6466,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -6275,6 +6497,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -6319,6 +6542,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -6355,6 +6579,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -6395,6 +6620,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -6425,6 +6651,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -6481,6 +6708,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -6535,6 +6763,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -6593,6 +6822,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -6663,6 +6893,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -6682,28 +6913,31 @@ Response example:
 }
 
 ```
+
 Returns CryptoCurrency withdrawal history data.##### Request
 
 `GET /private/v1/account/withdrawal/history`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling symbols arehere |
-| fromTimestamp | string | Required | Start search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:00:00.000Z)* When only fromTimestamp is specified, toTimestamp will be 'fromTimestamp + 30 minutes'. |
-| toTimestamp | string | Optional | End search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:30:00.000Z)* The maximum difference between fromTimestamp and toTimestamp is 30 minutes. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling symbols arehere |
+  | fromTimestamp | string | Required | Start search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:
+  00:00.000Z)* When only fromTimestamp is specified, toTimestamp will be 'fromTimestamp + 30 minutes'. |
+  | toTimestamp | string | Optional | End search (UTC):YYYY-MM-DDTHH:MM:SS.SSSZ format string (e.g. 2023-03-01T00:30:
+  00.000Z)* The maximum difference between fromTimestamp and toTimestamp is 30 minutes. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| address | string | address |
-| amount | string | amount |
-| fee | string | fee |
-| status | string | status:EXECUTED |
-| symbol | string | The handling symbols arehere |
-| timestamp | string | executed timestamp(UTC) |
-| txHash | string | transaction hash |
+| Property Name | Value  | Description                  |
+|---------------|--------|------------------------------|
+| address       | string | address                      |
+| amount        | string | amount                       |
+| fee           | string | fee                          |
+| status        | string | status:EXECUTED              |
+| symbol        | string | The handling symbols arehere |
+| timestamp     | string | executed timestamp(UTC)      |
+| txHash        | string | transaction hash             |
 
 ## Orders
 
@@ -6741,6 +6975,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -6771,6 +7006,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -6815,6 +7051,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -6850,6 +7087,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -6890,6 +7128,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -6920,6 +7159,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -6975,6 +7215,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -7029,6 +7270,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -7087,6 +7329,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -7157,6 +7400,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -7203,34 +7447,35 @@ Response example:
 }
 
 ```
+
 Gets the specified order id's order information.Target: Spot and Margin trading##### Request
 
 `GET /private/v1/orders`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| orderId | string | Required | A comma-separated list of order ids. The maximum number of order ids is 10. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | orderId | string | Required | A comma-separated list of order ids. The maximum number of order ids is 10. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| rootOrderId | number | Root order id |
-| orderId | number | Order id |
-| symbol | string | The handling symbols arehere |
-| side | string | Side:BUYSELL |
-| orderType | string | Order Type:NORMALLOSSCUT |
-| executionType | string | Execution Type:MARKETLIMITSTOP |
-| settleType | string | Settlement Type:OPENCLOSE |
-| size | string | Quantity of the order |
-| executedSize | string | Executed quantity |
-| price | string | Price of the order (It should be "0" if the order isMARKET.) |
-| losscutPrice | string | Margin Liquidation (It should be "0" if the order is Spot trading or losscutPrice is not set.) |
-| status | string | Order Status:WAITINGORDEREDMODIFYINGCANCELLINGCANCELEDEXECUTEDEXPIRED*WAITINGis valid for stop limit orders. |
-| cancelType | string | Cancel Type:USERPOSITION_LOSSCUTINSUFFICIENT_BALANCEINSUFFICIENT_MARGINACCOUNT_LOSSCUTMARGIN_CALLMARGIN_CALL_LOSSCUTEXPIRED_FAKEXPIRED_FOKEXPIRED_SOKEXPIRED_SELFTRADE*It is returned if status isCANCELLING,CANCELED, orEXPIRED. |
-| timeInForce | string | Time in force:FAKFASFOK(SOKis Post-only order) |
-| timestamp | string | Ordered timestamp |
+| Property Name | Value  | Description                                                                                                                                                                                                                       |
+|---------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| rootOrderId   | number | Root order id                                                                                                                                                                                                                     |
+| orderId       | number | Order id                                                                                                                                                                                                                          |
+| symbol        | string | The handling symbols arehere                                                                                                                                                                                                      |
+| side          | string | Side:BUYSELL                                                                                                                                                                                                                      |
+| orderType     | string | Order Type:NORMALLOSSCUT                                                                                                                                                                                                          |
+| executionType | string | Execution Type:MARKETLIMITSTOP                                                                                                                                                                                                    |
+| settleType    | string | Settlement Type:OPENCLOSE                                                                                                                                                                                                         |
+| size          | string | Quantity of the order                                                                                                                                                                                                             |
+| executedSize  | string | Executed quantity                                                                                                                                                                                                                 |
+| price         | string | Price of the order (It should be "0" if the order isMARKET.)                                                                                                                                                                      |
+| losscutPrice  | string | Margin Liquidation (It should be "0" if the order is Spot trading or losscutPrice is not set.)                                                                                                                                    |
+| status        | string | Order Status:WAITINGORDEREDMODIFYINGCANCELLINGCANCELEDEXECUTEDEXPIRED*WAITINGis valid for stop limit orders.                                                                                                                      |
+| cancelType    | string | Cancel Type:USERPOSITION_LOSSCUTINSUFFICIENT_BALANCEINSUFFICIENT_MARGINACCOUNT_LOSSCUTMARGIN_CALLMARGIN_CALL_LOSSCUTEXPIRED_FAKEXPIRED_FOKEXPIRED_SOKEXPIRED_SELFTRADE*It is returned if status isCANCELLING,CANCELED, orEXPIRED. |
+| timeInForce   | string | Time in force:FAKFASFOK(SOKis Post-only order)                                                                                                                                                                                    |
+| timestamp     | string | Ordered timestamp                                                                                                                                                                                                                 |
 
 ## Active Orders
 
@@ -7268,6 +7513,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -7302,6 +7548,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -7346,6 +7593,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -7383,6 +7631,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -7423,6 +7672,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -7453,6 +7703,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -7511,6 +7762,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -7565,6 +7817,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -7623,6 +7876,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -7693,6 +7947,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -7726,35 +7981,37 @@ Response example:
 }
 
 ```
+
 Gets active orders list of the specified symbol.Target: Spot and Margin trading##### Request
 
 `GET /private/v1/activeOrders`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling symbols arehere |
-| page | number | Optional | Target page: If a page is not specified, it will run assuming 1 is set. |
-| count | number | Optional | Number of items that you want to get in 1 page: If a count is not specified, it will run assuming 100 (maximum value) is set. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling symbols arehere |
+  | page | number | Optional | Target page: If a page is not specified, it will run assuming 1 is set. |
+  | count | number | Optional | Number of items that you want to get in 1 page: If a count is not specified, it will run
+  assuming 100 (maximum value) is set. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| rootOrderId | number | Root order id |
-| orderId | number | Order id |
-| symbol | string | The handling symbols arehere |
-| side | string | Side:BUYSELL |
-| orderType | string | Order Type:NORMALLOSSCUT |
-| executionType | string | Execution Type:MARKETLIMITSTOP |
-| settleType | string | Settlement Type:OPENCLOSE |
-| size | string | Quantity of the order |
-| executedSize | string | Executed quantity |
-| price | string | Price of the order (It should be "0" if the order isMARKET.) |
-| losscutPrice | string | Margin Liquidation (It should be "0" if the order is Spot trading or losscutPrice is not set.) |
-| status | string | Order Status:WAITINGORDEREDMODIFYINGCANCELLING*WAITINGis valid for stop limit orders. |
-| timeInForce | string | Time in force:FAKFASFOK(SOKis Post-only order) |
-| timestamp | string | Ordered timestamp |
+| Property Name | Value  | Description                                                                                    |
+|---------------|--------|------------------------------------------------------------------------------------------------|
+| rootOrderId   | number | Root order id                                                                                  |
+| orderId       | number | Order id                                                                                       |
+| symbol        | string | The handling symbols arehere                                                                   |
+| side          | string | Side:BUYSELL                                                                                   |
+| orderType     | string | Order Type:NORMALLOSSCUT                                                                       |
+| executionType | string | Execution Type:MARKETLIMITSTOP                                                                 |
+| settleType    | string | Settlement Type:OPENCLOSE                                                                      |
+| size          | string | Quantity of the order                                                                          |
+| executedSize  | string | Executed quantity                                                                              |
+| price         | string | Price of the order (It should be "0" if the order isMARKET.)                                   |
+| losscutPrice  | string | Margin Liquidation (It should be "0" if the order is Spot trading or losscutPrice is not set.) |
+| status        | string | Order Status:WAITINGORDEREDMODIFYINGCANCELLING*WAITINGis valid for stop limit orders.          |
+| timeInForce   | string | Time in force:FAKFASFOK(SOKis Post-only order)                                                 |
+| timestamp     | string | Ordered timestamp                                                                              |
 
 ## Executions
 
@@ -7792,6 +8049,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -7824,6 +8082,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -7868,6 +8127,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -7903,6 +8163,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -7943,6 +8204,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -7973,6 +8235,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -8028,6 +8291,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -8082,6 +8346,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -8140,6 +8405,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -8210,6 +8476,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -8249,33 +8516,36 @@ Response example:
 }
 
 ```
-Gets executed order information of the specified order id or execution id.Target: Spot and Margin trading- Either`orderId`or`executionId`is required. Not to be able to set both of them at once.
+
+Gets executed order information of the specified order id or execution id.Target: Spot and Margin trading- Either
+`orderId`or`executionId`is required. Not to be able to set both of them at once.
 
 ##### Request
 
 `GET /private/v1/executions`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| orderId | number | * | EitherorderIdorexecutionIdis required. |
-| executionId | string | * | EitherorderIdorexecutionIdis required. A comma-separated list of execution ids. The maximum number of execution ids is 10. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | orderId | number | * | EitherorderIdorexecutionIdis required. |
+  | executionId | string | * | EitherorderIdorexecutionIdis required. A comma-separated list of execution ids. The
+  maximum number of execution ids is 10. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| executionId | number | Execution id |
-| orderId | number | Order id |
-| positionId | number | Position id*Margin trading only |
-| symbol | string | The handling symbols arehere |
-| side | string | Side:BUYSELL |
-| settleType | string | Settlement Type:OPENCLOSE |
-| size | string | Executed quantity |
-| price | string | Executed price |
-| lossGain | string | Settlement profit/loss |
-| fee | string | Trade fee*It returns a positive value if Taker, a negative value if Maker. |
-| timestamp | string | Executed timestamp |
+| Property Name | Value  | Description                                                                |
+|---------------|--------|----------------------------------------------------------------------------|
+| executionId   | number | Execution id                                                               |
+| orderId       | number | Order id                                                                   |
+| positionId    | number | Position id*Margin trading only                                            |
+| symbol        | string | The handling symbols arehere                                               |
+| side          | string | Side:BUYSELL                                                               |
+| settleType    | string | Settlement Type:OPENCLOSE                                                  |
+| size          | string | Executed quantity                                                          |
+| price         | string | Executed price                                                             |
+| lossGain      | string | Settlement profit/loss                                                     |
+| fee           | string | Trade fee*It returns a positive value if Taker, a negative value if Maker. |
+| timestamp     | string | Executed timestamp                                                         |
 
 ## Latest Executions
 
@@ -8313,6 +8583,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -8347,6 +8618,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -8391,6 +8663,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -8428,6 +8701,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -8468,6 +8742,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -8498,6 +8773,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -8556,6 +8832,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -8610,6 +8887,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -8668,6 +8946,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -8738,6 +9017,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -8768,34 +9048,37 @@ Response example:
 }
 
 ```
-Gets the latest executed order information.Target: Spot and Margin trading- This returns the last day of executed order information.
+
+Gets the latest executed order information.Target: Spot and Margin trading- This returns the last day of executed order
+information.
 
 ##### Request
 
 `GET /private/v1/latestExecutions`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling symbols arehere |
-| page | number | Optional | Target page: If a page is not specified, it will run assuming 1 is set. |
-| count | number | Optional | Number of items that you want to get in 1 page: If a count is not specified, it will run assuming 100 (maximum value) is set. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling symbols arehere |
+  | page | number | Optional | Target page: If a page is not specified, it will run assuming 1 is set. |
+  | count | number | Optional | Number of items that you want to get in 1 page: If a count is not specified, it will run
+  assuming 100 (maximum value) is set. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| executionId | number | Execution id |
-| orderId | number | Order id |
-| positionId | number | Position id*Margin trading only |
-| symbol | string | The handling symbols arehere |
-| side | string | Side:BUYSELL |
-| settleType | string | Settlement Type:OPENCLOSE |
-| size | string | Executed quantity |
-| price | string | Executed price |
-| lossGain | string | Settlement profit/loss |
-| fee | string | Trade fee*It returns a positive value if Taker, a negative value if Maker. |
-| timestamp | string | Executed timestamp |
+| Property Name | Value  | Description                                                                |
+|---------------|--------|----------------------------------------------------------------------------|
+| executionId   | number | Execution id                                                               |
+| orderId       | number | Order id                                                                   |
+| positionId    | number | Position id*Margin trading only                                            |
+| symbol        | string | The handling symbols arehere                                               |
+| side          | string | Side:BUYSELL                                                               |
+| settleType    | string | Settlement Type:OPENCLOSE                                                  |
+| size          | string | Executed quantity                                                          |
+| price         | string | Executed price                                                             |
+| lossGain      | string | Settlement profit/loss                                                     |
+| fee           | string | Trade fee*It returns a positive value if Taker, a negative value if Maker. |
+| timestamp     | string | Executed timestamp                                                         |
 
 ## Open Positions
 
@@ -8833,6 +9116,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -8867,6 +9151,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -8911,6 +9196,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -8948,6 +9234,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -8988,6 +9275,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -9018,6 +9306,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -9076,6 +9365,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -9130,6 +9420,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -9188,6 +9479,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -9258,6 +9550,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -9287,31 +9580,33 @@ Response example:
 }
 
 ```
+
 Gets a list of opened postions.Target: Margin trading##### Request
 
 `GET /private/v1/openPositions`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling margin symbols arehere |
-| page | number | Optional | Target page: If a page is not specified, it will run assuming 1 is set. |
-| count | number | Optional | Number of items that you want to get in 1 page: If a count is not specified, it will run assuming 100 (maximum value) is set. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling margin symbols arehere |
+  | page | number | Optional | Target page: If a page is not specified, it will run assuming 1 is set. |
+  | count | number | Optional | Number of items that you want to get in 1 page: If a count is not specified, it will run
+  assuming 100 (maximum value) is set. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| positionId | number | Position id |
-| symbol | string | The handling margin symbols arehere |
-| side | string | Side:BUYSELL |
-| size | string | Quantity of the position |
-| orderdSize | string | Quantity of the order |
-| price | string | Price of the position |
-| lossGain | string | Settlement profit/loss |
-| leverage | string | Leverage |
-| losscutPrice | string | Margin Liquidation |
-| timestamp | string | Executed timestamp |
+| Property Name | Value  | Description                         |
+|---------------|--------|-------------------------------------|
+| positionId    | number | Position id                         |
+| symbol        | string | The handling margin symbols arehere |
+| side          | string | Side:BUYSELL                        |
+| size          | string | Quantity of the position            |
+| orderdSize    | string | Quantity of the order               |
+| price         | string | Price of the position               |
+| lossGain      | string | Settlement profit/loss              |
+| leverage      | string | Leverage                            |
+| losscutPrice  | string | Margin Liquidation                  |
+| timestamp     | string | Executed timestamp                  |
 
 ## Position Summary
 
@@ -9349,6 +9644,7 @@ axios.get(endPoint + path + parameters, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -9381,6 +9677,7 @@ res = requests.get(endPoint + path, headers=headers, params=parameters)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -9425,6 +9722,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -9460,6 +9758,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -9500,6 +9799,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -9530,6 +9830,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -9585,6 +9886,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -9639,6 +9941,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -9697,6 +10000,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -9767,6 +10071,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -9788,27 +10093,30 @@ Response example:
 }
 
 ```
-Gets a list of the position summary.Target: Margin trading- It is possible to get the position summary by symbol and side (BUY/SELL). If you want to get the position summary of all symbols, we recommend calling out it without a symbol.
+
+Gets a list of the position summary.Target: Margin trading- It is possible to get the position summary by symbol and
+side (BUY/SELL). If you want to get the position summary of all symbols, we recommend calling out it without a symbol.
 
 ##### Request
 
 `GET /private/v1/positionSummary`##### Parameters
 
 - Parameter type: query
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Optional | If a symbol is not specified, it will return the position summary of all symbols. The handling margin symbols arehere |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Optional | If a symbol is not specified, it will return the position summary of all symbols. The
+  handling margin symbols arehere |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| averagePositionRate | string | Average price of the position |
-| positionLossGain | string | Settlement profit/loss |
-| side | string | Side:BUYSELL |
-| sumOrderQuantity | string | Quantity of the order |
-| sumPositionQuantity | string | Quantity of the position |
-| symbol | string | The handling margin symbols arehere |
+| Property Name       | Value  | Description                         |
+|---------------------|--------|-------------------------------------|
+| averagePositionRate | string | Average price of the position       |
+| positionLossGain    | string | Settlement profit/loss              |
+| side                | string | Side:BUYSELL                        |
+| sumOrderQuantity    | string | Quantity of the order               |
+| sumPositionQuantity | string | Quantity of the position            |
+| symbol              | string | The handling margin symbols arehere |
 
 ## Transfer
 
@@ -9849,6 +10157,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -9882,6 +10191,7 @@ res = requests.get(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -9930,6 +10240,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -9967,6 +10278,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -10013,6 +10325,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -10047,6 +10360,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -10103,6 +10417,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -10163,6 +10478,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -10225,6 +10541,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -10302,6 +10619,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -10316,20 +10634,21 @@ Response example:
 }
 
 ```
+
 Transfer to crypto account or to forex account.Maximum 1 transfer requests per 3 minute.##### Request
 
 `POST /private/v1/account/transfer`##### Parameters
 
 - Parameter content type:`application/json`
-| Property Name | Value | Description |
-| --- | --- | --- |
-| amount | string | Transfer in Japanese yen |
-| transferType | string | Account transfer type:WITHDRAWALDEPOSIT |
+  | Property Name | Value | Description |
+  | --- | --- | --- |
+  | amount | string | Transfer in Japanese yen |
+  | transferType | string | Account transfer type:WITHDRAWALDEPOSIT |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
+| Property Name     | Value  | Description              |
+|-------------------|--------|--------------------------|
 | transferredAmount | string | Account transfer amount. |
 
 ## Order
@@ -10375,6 +10694,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -10413,6 +10733,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -10466,6 +10787,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -10508,6 +10830,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -10559,6 +10882,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -10600,6 +10924,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -10663,6 +10988,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -10732,6 +11058,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -10800,6 +11127,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -10882,6 +11210,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -10892,7 +11221,9 @@ Response example:
 }
 
 ```
+
 Creates a new orderTarget: Spot and Margin trading- Spot trade: BUY/SELL order
+
 - Margin trade: Open new BUY/SELL order
 
 ##### Request
@@ -10900,22 +11231,27 @@ Creates a new orderTarget: Spot and Margin trading- Spot trade: BUY/SELL order
 `POST /private/v1/order`##### Parameters
 
 - Parameter content type:`application/json`
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling symbols arehere |
-| side | string | Required | BUYSELL |
-| executionType | string | Required | MARKETLIMITSTOP |
-| timeInForce | string | Optional | FAKFASFOK((SOKis Post-only order)LIMITcan only be specified  )*If timeInForce is not specified, FAK for MARKET and STOP, FAS for LIMIT.Please refer toherefor symbols for which SOK can be specified. |
-| price | string | *Depending on executionType | Required ifLIMITSTOP. Not required ifMARKET. |
-| losscutPrice | string | Optional | Available only when order is margin trading and executionType isLIMITorSTOP. |
-| size | string | Required |  |
-| cancelBefore | bool | Optional | trueCancellation of active orders and creating new orders will occur at the same time based on the below rule:If order size > available balance:Existing orders will be cancelled from the oldest, and a new order will execute based on available balance.If order size ≦ available balance:Old orders will not be cancelled and a new order will be created.If cancelBefore is not specified, it will run assumingfalseis set.*You can only specify cancelBefore astruefor orders which are spot trading, executionType:MARKET, timeInforce:FAKand side:SELL. |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling symbols arehere |
+  | side | string | Required | BUYSELL |
+  | executionType | string | Required | MARKETLIMITSTOP |
+  | timeInForce | string | Optional | FAKFASFOK((SOKis Post-only order)LIMITcan only be specified  )*If timeInForce is
+  not specified, FAK for MARKET and STOP, FAS for LIMIT.Please refer toherefor symbols for which SOK can be specified. |
+  | price | string | *Depending on executionType | Required ifLIMITSTOP. Not required ifMARKET. |
+  | losscutPrice | string | Optional | Available only when order is margin trading and executionType isLIMITorSTOP. |
+  | size | string | Required | |
+  | cancelBefore | bool | Optional | trueCancellation of active orders and creating new orders will occur at the same
+  time based on the below rule:If order size > available balance:Existing orders will be cancelled from the oldest, and
+  a new order will execute based on available balance.If order size ≦ available balance:Old orders will not be cancelled
+  and a new order will be created.If cancelBefore is not specified, it will run assumingfalseis set.*You can only
+  specify cancelBefore astruefor orders which are spot trading, executionType:MARKET, timeInforce:FAKand side:SELL. |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| data | string | The new order'sorderId |
+| Property Name | Value  | Description            |
+|---------------|--------|------------------------|
+| data          | string | The new order'sorderId |
 
 ## Change Order
 
@@ -10957,6 +11293,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -10991,6 +11328,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -11040,6 +11378,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -11078,6 +11417,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -11122,6 +11462,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -11159,6 +11500,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -11218,6 +11560,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -11283,6 +11626,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -11347,6 +11691,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -11425,6 +11770,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -11434,16 +11780,17 @@ Response example:
 }
 
 ```
+
 Changes an order.Target: Spot and Margin trading##### Request
 
 `POST /private/v1/changeOrder`##### Parameters
 
 - Parameter content type:`application/json`
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| orderId | number | Required |  |
-| price | string | Required |  |
-| losscutPrice | string | Optional |  |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | orderId | number | Required | |
+  | price | string | Required | |
+  | losscutPrice | string | Optional | |
 
 ## Cancel Order
 
@@ -11483,6 +11830,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -11515,6 +11863,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -11562,6 +11911,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -11598,6 +11948,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -11642,6 +11993,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -11677,6 +12029,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -11734,6 +12087,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -11797,6 +12151,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -11859,6 +12214,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -11935,6 +12291,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -11944,14 +12301,15 @@ Response example:
 }
 
 ```
+
 Cancels an orderTarget: Spot and Margin trading##### Request
 
 `POST /private/v1/cancelOrder`##### Parameters
 
 - Parameter content type:`application/json`
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| orderId | number | Required |  |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | orderId | number | Required | |
 
 ## Cancel Orders
 
@@ -11991,6 +12349,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -12023,6 +12382,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -12070,6 +12430,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -12106,6 +12467,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -12150,6 +12512,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -12185,6 +12548,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -12242,6 +12606,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -12305,6 +12670,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -12367,6 +12733,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -12443,6 +12810,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -12467,6 +12835,7 @@ Response example:
 }
 
 ```
+
 Cancels ordersTarget: Spot and Margin trading- It is possible to cancel max 10 orders
 
 ##### Request
@@ -12474,16 +12843,16 @@ Cancels ordersTarget: Spot and Margin trading- It is possible to cancel max 10 o
 `POST /private/v1/cancelOrders`##### Parameters
 
 - Parameter content type:`application/json`
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| orderIds | array | Required |  |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | orderIds | array | Required | |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| success | array | Order id that succeeded to accept cancellation |
-| failed | array | Order id that failed to accept cancellation and failure information |
+| Property Name | Value | Description                                                         |
+|---------------|-------|---------------------------------------------------------------------|
+| success       | array | Order id that succeeded to accept cancellation                      |
+| failed        | array | Order id that failed to accept cancellation and failure information |
 
 ## Cancel Bulk Order
 
@@ -12526,6 +12895,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -12561,6 +12931,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -12611,6 +12982,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -12650,6 +13022,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -12698,6 +13071,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -12736,6 +13110,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -12796,6 +13171,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -12862,6 +13238,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -12927,6 +13304,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -13006,6 +13384,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -13016,6 +13395,7 @@ Response example:
 }
 
 ```
+
 Cancel bulk ordersTarget: Spot and Margin trading- After searching for cancellation target,Its cancel max 10 orders
 
 ##### Request
@@ -13023,18 +13403,21 @@ Cancel bulk ordersTarget: Spot and Margin trading- After searching for cancellat
 `POST /private/v1/cancelBulkOrder`##### Parameters
 
 - Parameter content type:`application/json`
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbols | array | Required | The handling symbols arehere |
-| side | string | Optional | BUYSELLWhen the parameter is specified, the order of the specified side targets cancellation |
-| settleType | string | Optional | OPENCLOSEWhen the parameter is specified, the spot order and the margin order of the specified settleType targets cancellation |
-| desc | bool | Optional | trueThe order are cancelled in order from newest by order timefalseThe order are cancelled in order from oldest by order timeIf the desc is not specified, Its value is false |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbols | array | Required | The handling symbols arehere |
+  | side | string | Optional | BUYSELLWhen the parameter is specified, the order of the specified side targets
+  cancellation |
+  | settleType | string | Optional | OPENCLOSEWhen the parameter is specified, the spot order and the margin order of
+  the specified settleType targets cancellation |
+  | desc | bool | Optional | trueThe order are cancelled in order from newest by order timefalseThe order are cancelled
+  in order from oldest by order timeIf the desc is not specified, Its value is false |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| data | array | Order id that succeeded to accept cancellation |
+| Property Name | Value | Description                                    |
+|---------------|-------|------------------------------------------------|
+| data          | array | Order id that succeeded to accept cancellation |
 
 ## Close Order
 
@@ -13084,6 +13467,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -13126,6 +13510,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -13183,6 +13568,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -13229,6 +13615,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -13283,6 +13670,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -13328,6 +13716,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -13395,6 +13784,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -13468,6 +13858,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -13535,6 +13926,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -13621,6 +14013,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -13631,27 +14024,34 @@ Response example:
 }
 
 ```
+
 Closes a positionTarget: Margin trading##### Request
 
 `POST /private/v1/closeOrder`##### Parameters
 
 - Parameter content type:`application/json`
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling margin symbols arehere |
-| side | string | Required | BUYSELL |
-| executionType | string | Required | MARKETLIMITSTOP |
-| timeInForce | string | Optional | FAKFASFOK((SOKis Post-only order)LIMITcan only be specified  )*If timeInForce is not specified, FAK for MARKET and STOP, FAS for LIMIT.Please refer toherefor symbols for which SOK can be specified. |
-| price | string | *Depending on executionType | Required ifLIMITSTOP. Not required ifMARKET. |
-| settlePosition.positionId | number | Required | Allowed to set one position. |
-| settlePosition.size | string | Required | Allowed to set one position. |
-| cancelBefore | bool | Optional | trueCancellation of active orders and creating new orders will occur at the same time based on the below rule:If order size > available balance:Existing orders will be cancelled from the oldest, and a new order will execute based on available balance.If order size ≦ available balance:Old orders will not be cancelled and a new order will be created.If cancelBefore is not specified, it will run assumingfalseis set.*You can only specify cancelBefore astruefor orders which are executionType:MARKET, timeInforce:FAKand side:SELL.*cancelBefore cannot be set for active orders associated with multiple positions |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling margin symbols arehere |
+  | side | string | Required | BUYSELL |
+  | executionType | string | Required | MARKETLIMITSTOP |
+  | timeInForce | string | Optional | FAKFASFOK((SOKis Post-only order)LIMITcan only be specified  )*If timeInForce is
+  not specified, FAK for MARKET and STOP, FAS for LIMIT.Please refer toherefor symbols for which SOK can be specified. |
+  | price | string | *Depending on executionType | Required ifLIMITSTOP. Not required ifMARKET. |
+  | settlePosition.positionId | number | Required | Allowed to set one position. |
+  | settlePosition.size | string | Required | Allowed to set one position. |
+  | cancelBefore | bool | Optional | trueCancellation of active orders and creating new orders will occur at the same
+  time based on the below rule:If order size > available balance:Existing orders will be cancelled from the oldest, and
+  a new order will execute based on available balance.If order size ≦ available balance:Old orders will not be cancelled
+  and a new order will be created.If cancelBefore is not specified, it will run assumingfalseis set.*You can only
+  specify cancelBefore astruefor orders which are executionType:MARKET, timeInforce:FAKand side:SELL.*cancelBefore
+  cannot be set for active orders associated with multiple positions |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| data | string | The new closing order'sorderId |
+| Property Name | Value  | Description                    |
+|---------------|--------|--------------------------------|
+| data          | string | The new closing order'sorderId |
 
 ## Close Bulk Order
 
@@ -13696,6 +14096,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -13733,6 +14134,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -13785,6 +14187,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -13826,6 +14229,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -13875,6 +14279,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -13915,6 +14320,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -13977,6 +14383,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -14045,6 +14452,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -14111,6 +14519,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -14192,6 +14601,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -14202,25 +14612,27 @@ Response example:
 }
 
 ```
+
 Closes bulk orders.Target: Margin trading##### Request
 
 `POST /private/v1/closeBulkOrder`##### Parameters
 
 - Parameter content type:`application/json`
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| symbol | string | Required | The handling margin symbols arehere |
-| side | string | Required | BUYSELL |
-| executionType | string | Required | MARKETLIMITSTOP |
-| timeInForce | string | Optional | FAKFASFOK((SOKis Post-only order)LIMITcan only be specified  )*If timeInForce is not specified, FAK for MARKET and STOP, FAS for LIMIT.Please refer toherefor symbols for which SOK can be specified. |
-| price | string | *Depending on executionType | Required ifLIMITSTOP. Not required ifMARKET. |
-| size | string | Required |  |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | symbol | string | Required | The handling margin symbols arehere |
+  | side | string | Required | BUYSELL |
+  | executionType | string | Required | MARKETLIMITSTOP |
+  | timeInForce | string | Optional | FAKFASFOK((SOKis Post-only order)LIMITcan only be specified  )*If timeInForce is
+  not specified, FAK for MARKET and STOP, FAS for LIMIT.Please refer toherefor symbols for which SOK can be specified. |
+  | price | string | *Depending on executionType | Required ifLIMITSTOP. Not required ifMARKET. |
+  | size | string | Required | |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| data | string | The new closing bulk order'sorderId |
+| Property Name | Value  | Description                         |
+|---------------|--------|-------------------------------------|
+| data          | string | The new closing bulk order'sorderId |
 
 ## Change Margin Liquidation
 
@@ -14261,6 +14673,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -14294,6 +14707,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -14342,6 +14756,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -14379,6 +14794,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -14423,6 +14839,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -14459,6 +14876,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -14517,6 +14935,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -14581,6 +15000,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -14644,6 +15064,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -14721,6 +15142,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -14730,21 +15152,25 @@ Response example:
 }
 
 ```
+
 Changes the margin liquidation of the specified position.Target: Margin trading##### Request
 
 `POST /private/v1/changeLosscutPrice`##### Parameters
 
 - Parameter content type:`application/json`
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| positionId | number | Required |  |
-| losscutPrice | string | Required |  |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | positionId | number | Required | |
+  | losscutPrice | string | Required | |
 
 # Private WebSocket API
 
-- A ping will be sent from the server to a client once per minute. If there's no response (pong) from a client 3 consecutive times, then the WebSocket will be disconnected automatically.
-- Using a[Private API](https://api.coin.z.com/docs/en/?rust#ws-auth-post)for authentication in order to obtain, extend and remove the access token.
-- A Private WebSocket API's URL will be`Endpoint of Private WebSocket API + Access token`e.g.`wss://api.coin.z.com/ws/private/v1/xxxxxxxxxxxxxxxxxxxx`
+- A ping will be sent from the server to a client once per minute. If there's no response (pong) from a client 3
+  consecutive times, then the WebSocket will be disconnected automatically.
+- Using a[Private API](https://api.coin.z.com/docs/en/?rust#ws-auth-post)for authentication in order to obtain, extend
+  and remove the access token.
+- A Private WebSocket API's URL will be`Endpoint of Private WebSocket API + Access token`e.g.
+  `wss://api.coin.z.com/ws/private/v1/xxxxxxxxxxxxxxxxxxxx`
 
 ## Create Access Token
 
@@ -14782,6 +15208,7 @@ axios.post(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -14812,6 +15239,7 @@ res = requests.post(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -14857,6 +15285,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -14891,6 +15320,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -14933,6 +15363,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -14966,6 +15397,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -15021,6 +15453,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -15083,6 +15516,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -15145,6 +15579,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -15219,6 +15654,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -15229,19 +15665,25 @@ Response example:
 }
 
 ```
+
 Gets an access token to call Private WebSocket API.- The expiration time of access token is 60 minutes.
+
 - The maximum number of access tokens is 5.
-- If the number of issued tokens exceeds the maximum number of tokens, the tokens will be deleted in order of expiration time.
-- To use the API with the existing API keys, openyour membership site>API>編集 (Edit)>APIキーの編集 (API key setting)screen and click "約定情報通知(WebSocket)" (Execution Notifications), "注文情報通知(WebSocket)" (Order Notifications), "ポジション情報通知(WebSocket)" (Position Notifications) or "ポジションサマリー情報通知(WebSocket)" (Position Summary Notifications) to call the Create Access Token API.
-*Please set the API key permission before obtaining the access token.##### Request
+- If the number of issued tokens exceeds the maximum number of tokens, the tokens will be deleted in order of expiration
+  time.
+- To use the API with the existing API keys, openyour membership site>API>編集 (Edit)>APIキーの編集 (API key setting)
+  screen and click "約定情報通知(WebSocket)" (Execution Notifications), "注文情報通知(WebSocket)" (Order
+  Notifications), "ポジション情報通知(WebSocket)" (Position Notifications) or "ポジションサマリー情報通知(WebSocket)" (
+  Position Summary Notifications) to call the Create Access Token API.
+  *Please set the API key permission before obtaining the access token.##### Request
 
 `POST /private/v1/ws-auth`##### Parameters
 
 None##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| data | string | Access token |
+| Property Name | Value  | Description  |
+|---------------|--------|--------------|
+| data          | string | Access token |
 
 ## Extend Access Token
 
@@ -15281,6 +15723,7 @@ axios.put(endPoint + path, reqBody, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -15313,6 +15756,7 @@ res = requests.put(endPoint + path, headers=headers, data=json.dumps(reqBody))
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -15360,6 +15804,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -15396,6 +15841,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -15440,6 +15886,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -15475,6 +15922,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -15532,6 +15980,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -15594,6 +16043,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -15656,6 +16106,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -15732,6 +16183,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -15741,6 +16193,7 @@ Response example:
 }
 
 ```
+
 Extends the expiration time of an access token.- The new expiration time is 60 minutes.
 
 ##### Request
@@ -15748,9 +16201,9 @@ Extends the expiration time of an access token.- The new expiration time is 60 m
 `PUT /private/v1/ws-auth`##### Parameters
 
 - Parameter type: JSON
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| token | string | Required | Access token |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | token | string | Required | Access token |
 
 ## Delete Access Token
 
@@ -15791,6 +16244,7 @@ axios.delete(endPoint + path, options)
   });
 
 ```
+
 ```
 import requests
 import json
@@ -15823,6 +16277,7 @@ res = requests.delete(endPoint + path, headers=headers, data=json.dumps(reqBody)
 print (json.dumps(res.json(), indent=2))
 
 ```
+
 ```
 package main
 
@@ -15870,6 +16325,7 @@ func main() {
 }
 
 ```
+
 ```
 require 'net/http'
 require 'json'
@@ -15906,6 +16362,7 @@ response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https'
 puts JSON.pretty_generate(JSON.parse(response.body), :indent=>'  ')
 
 ```
+
 ```
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -15950,6 +16407,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -15985,6 +16443,7 @@ $json_res = json_decode($response);
 echo json_encode($json_res, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -16042,6 +16501,7 @@ fn get_timestamp() -> u64 {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -16104,6 +16564,7 @@ main = do
   S8.putStrLn $ encodePretty (getResponseBody response :: Value)
 
 ```
+
 ```
 using System;
 using System.Net.Http;
@@ -16166,6 +16627,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 import CommonCrypto
@@ -16242,6 +16704,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -16251,14 +16714,15 @@ Response example:
 }
 
 ```
+
 Deletes an access token.##### Request
 
 `DELETE /private/v1/ws-auth`##### Parameters
 
 - Parameter type: JSON
-| Parameter | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| token | string | Required | Access token |
+  | Parameter | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | token | string | Required | Access token |
 
 ## Execution Notifications
 
@@ -16282,6 +16746,7 @@ ws.on("message", (data) => {
 });
 
 ```
+
 ```
 import json
 import websocket
@@ -16305,6 +16770,7 @@ ws.on_message = on_message
 ws.run_forever()
 
 ```
+
 ```
 package main
 
@@ -16335,6 +16801,7 @@ func main() {
 }
 
 ```
+
 ```
 require "faye/websocket"
 require "eventmachine"
@@ -16357,6 +16824,7 @@ EM.run {
 }
 
 ```
+
 ```
 import io.ktor.client.HttpClient
 import io.ktor.client.features.websocket.WebSockets
@@ -16392,6 +16860,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -16422,6 +16891,7 @@ $connector("wss://api.coin.z.com/ws/private/v1/xxxxxxxxxxxxxxxxxxxx")->then(func
 $loop->run();
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -16445,6 +16915,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -16480,6 +16951,7 @@ main :: IO ()
 main = withSocketsDo $ WSS.runSecureClient "api.coin.z.com" 443 "/ws/private/v1/xxxxxxxxxxxxxxxxxxxx" app
 
 ```
+
 ```
 using System;
 using System.Net.WebSockets;
@@ -16548,6 +17020,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -16603,6 +17076,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -16629,37 +17103,40 @@ Response example:
 }
 
 ```
-Receives latest execution events notifications.After[subscribe](), latest execution events notification will be sent.##### Parameters
+
+Receives latest execution events notifications.After[subscribe](), latest execution events notification will be
+sent.##### Parameters
 
 - Parameter type: JSON
-| Property Name | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| command | string | Required | subscribeunsubscribe |
-| channel | string | Required | executionEvents |
+  | Property Name | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | command | string | Required | subscribeunsubscribe |
+  | channel | string | Required | executionEvents |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| channel | string | executionEvents |
-| orderId | number | Order id |
-| executionId | number | Execution id |
-| symbol | string | The handling symbols arehere |
-| settleType | string | Settlement Type:OPENCLOSE |
-| executionType | string | Execution Type:MARKETLIMITSTOP |
-| side | string | Side:BUYSELL |
-| executionPrice | string | Executed price |
-| executionSize | string | Executed quantity |
-| positionId | number | Position id*Margin trading only |
-| orderTimestamp | string | Ordered timestamp |
-| executionTimestamp | string | Executed timestamp |
-| lossGain | string | Settlement profit/loss |
-| fee | string | Trade fee*It returns a positive value if Taker, a negative value if Maker. |
-| orderPrice | string | Price of the order (It should be "0" if the order isMARKET.) |
-| orderSize | string | Ordered size |
-| orderExecutedSize | string | Excecuted size of the order |
-| timeInForce | string | Time in force:FAKFASFOK(SOKis Post-only order) |
-| msgType | string | Message Type:ER |
+| Property Name      | Value  | Description                                                                |
+|--------------------|--------|----------------------------------------------------------------------------|
+| channel            | string | executionEvents                                                            |
+| orderId            | number | Order id                                                                   |
+| executionId        | number | Execution id                                                               |
+| symbol             | string | The handling symbols arehere                                               |
+| settleType         | string | Settlement Type:OPENCLOSE                                                  |
+| executionType      | string | Execution Type:MARKETLIMITSTOP                                             |
+| side               | string | Side:BUYSELL                                                               |
+| executionPrice     | string | Executed price                                                             |
+| executionSize      | string | Executed quantity                                                          |
+| positionId         | number | Position id*Margin trading only                                            |
+| orderTimestamp     | string | Ordered timestamp                                                          |
+| executionTimestamp | string | Executed timestamp                                                         |
+| lossGain           | string | Settlement profit/loss                                                     |
+| fee                | string | Trade fee*It returns a positive value if Taker, a negative value if Maker. |
+| orderPrice         | string | Price of the order (It should be "0" if the order isMARKET.)               |
+| orderSize          | string | Ordered size                                                               |
+| orderExecutedSize  | string | Excecuted size of the order                                                |
+| timeInForce        | string | Time in force:FAKFASFOK(SOKis Post-only order)                             |
+| msgType            | string | Message Type:ER                                                            |
+
 - There is no Response when[unsubscribe]()is requested.
 
 ## Order Notifications
@@ -16684,6 +17161,7 @@ ws.on("message", (data) => {
 });
 
 ```
+
 ```
 import json
 import websocket
@@ -16707,6 +17185,7 @@ ws.on_message = on_message
 ws.run_forever()
 
 ```
+
 ```
 package main
 
@@ -16737,6 +17216,7 @@ func main() {
 }
 
 ```
+
 ```
 require "faye/websocket"
 require "eventmachine"
@@ -16759,6 +17239,7 @@ EM.run {
 }
 
 ```
+
 ```
 import io.ktor.client.HttpClient
 import io.ktor.client.features.websocket.WebSockets
@@ -16794,6 +17275,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -16824,6 +17306,7 @@ $connector("wss://api.coin.z.com/ws/private/v1/xxxxxxxxxxxxxxxxxxxx")->then(func
 $loop->run();
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -16847,6 +17330,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -16882,6 +17366,7 @@ main :: IO ()
 main = withSocketsDo $ WSS.runSecureClient "api.coin.z.com" 443 "/ws/private/v1/xxxxxxxxxxxxxxxxxxxx" app
 
 ```
+
 ```
 using System;
 using System.Net.WebSockets;
@@ -16950,6 +17435,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -17005,6 +17491,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -17027,33 +17514,36 @@ Response example:
 }
 
 ```
-Receives latest order events notifications.After[subscribe](), latest order events notification will be sent.##### Parameters
+
+Receives latest order events notifications.After[subscribe](), latest order events notification will be sent.#####
+Parameters
 
 - Parameter type: JSON
-| Property Name | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| command | string | Required | subscribeunsubscribe |
-| channel | string | Required | orderEvents |
+  | Property Name | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | command | string | Required | subscribeunsubscribe |
+  | channel | string | Required | orderEvents |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| channel | string | orderEvents |
-| orderId | number | Order id |
-| symbol | string | The handling symbols arehere |
-| settleType | string | Settlement Type:OPENCLOSELOSS_CUT |
-| executionType | string | Execution Type:MARKETLIMITSTOP |
-| side | string | Side:BUYSELL |
-| orderStatus | string | Order Status:WAITINGORDEREDCANCELEDEXPIRED*WAITINGis valid for stop limit orders. |
-| cancelType | string | Cancel Type:USERPOSITION_LOSSCUTINSUFFICIENT_BALANCEINSUFFICIENT_MARGINACCOUNT_LOSSCUTMARGIN_CALLMARGIN_CALL_LOSSCUTEXPIRED_FAKEXPIRED_FOKEXPIRED_SOKEXPIRED_SELFTRADECLOSED_ORDER*It is returned if orderStatus isCANCELEDorEXPIRED.Cancel Type:SOK_TAKERPRICE_LIMIT*It is returned if orderStatus isORDERED. |
-| orderTimestamp | string | Ordered timestamp |
-| orderPrice | string | Price of the order (It should be "0" if the order isMARKET.) |
-| orderSize | string | Ordered size |
-| orderExecutedSize | string | Excecuted size of the order |
-| losscutPrice | string | Margin Liquidation (It should be "0" if the order is Spot trading or losscutPrice is not set.) |
-| timeInForce | string | Time in force:FAKFASFOK(SOKis Post-only order) |
-| msgType | string | Message Type:NORRORCORER |
+| Property Name     | Value  | Description                                                                                                                                                                                                                                                                                                    |
+|-------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| channel           | string | orderEvents                                                                                                                                                                                                                                                                                                    |
+| orderId           | number | Order id                                                                                                                                                                                                                                                                                                       |
+| symbol            | string | The handling symbols arehere                                                                                                                                                                                                                                                                                   |
+| settleType        | string | Settlement Type:OPENCLOSELOSS_CUT                                                                                                                                                                                                                                                                              |
+| executionType     | string | Execution Type:MARKETLIMITSTOP                                                                                                                                                                                                                                                                                 |
+| side              | string | Side:BUYSELL                                                                                                                                                                                                                                                                                                   |
+| orderStatus       | string | Order Status:WAITINGORDEREDCANCELEDEXPIRED*WAITINGis valid for stop limit orders.                                                                                                                                                                                                                              |
+| cancelType        | string | Cancel Type:USERPOSITION_LOSSCUTINSUFFICIENT_BALANCEINSUFFICIENT_MARGINACCOUNT_LOSSCUTMARGIN_CALLMARGIN_CALL_LOSSCUTEXPIRED_FAKEXPIRED_FOKEXPIRED_SOKEXPIRED_SELFTRADECLOSED_ORDER*It is returned if orderStatus isCANCELEDorEXPIRED.Cancel Type:SOK_TAKERPRICE_LIMIT*It is returned if orderStatus isORDERED. |
+| orderTimestamp    | string | Ordered timestamp                                                                                                                                                                                                                                                                                              |
+| orderPrice        | string | Price of the order (It should be "0" if the order isMARKET.)                                                                                                                                                                                                                                                   |
+| orderSize         | string | Ordered size                                                                                                                                                                                                                                                                                                   |
+| orderExecutedSize | string | Excecuted size of the order                                                                                                                                                                                                                                                                                    |
+| losscutPrice      | string | Margin Liquidation (It should be "0" if the order is Spot trading or losscutPrice is not set.)                                                                                                                                                                                                                 |
+| timeInForce       | string | Time in force:FAKFASFOK(SOKis Post-only order)                                                                                                                                                                                                                                                                 |
+| msgType           | string | Message Type:NORRORCORER                                                                                                                                                                                                                                                                                       |
+
 - There is no Response when[unsubscribe]()is requested.
 
 ## Position Notifications
@@ -17078,6 +17568,7 @@ ws.on("message", (data) => {
 });
 
 ```
+
 ```
 import json
 import websocket
@@ -17101,6 +17592,7 @@ ws.on_message = on_message
 ws.run_forever()
 
 ```
+
 ```
 package main
 
@@ -17131,6 +17623,7 @@ func main() {
 }
 
 ```
+
 ```
 require "faye/websocket"
 require "eventmachine"
@@ -17153,6 +17646,7 @@ EM.run {
 }
 
 ```
+
 ```
 import io.ktor.client.HttpClient
 import io.ktor.client.features.websocket.WebSockets
@@ -17188,6 +17682,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -17218,6 +17713,7 @@ $connector("wss://api.coin.z.com/ws/private/v1/xxxxxxxxxxxxxxxxxxxx")->then(func
 $loop->run();
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -17241,6 +17737,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -17276,6 +17773,7 @@ main :: IO ()
 main = withSocketsDo $ WSS.runSecureClient "api.coin.z.com" 443 "/ws/private/v1/xxxxxxxxxxxxxxxxxxxx" app
 
 ```
+
 ```
 using System;
 using System.Net.WebSockets;
@@ -17344,6 +17842,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -17399,6 +17898,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -17418,30 +17918,33 @@ Response example:
 }
 
 ```
-Receives latest position events notifications.After[subscribe](), latest position events notification will be sent.##### Parameters
+
+Receives latest position events notifications.After[subscribe](), latest position events notification will be sent.#####
+Parameters
 
 - Parameter type: JSON
-| Property Name | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| command | string | Required | subscribeunsubscribe |
-| channel | string | Required | positionEvents |
+  | Property Name | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | command | string | Required | subscribeunsubscribe |
+  | channel | string | Required | positionEvents |
 
 ##### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| channel | string | positionEvents |
-| positionId | number | Position id |
-| symbol | string | The handling margin symbols arehere |
-| side | string | Side:BUYSELL |
-| size | string | Quantity of the position |
-| orderdSize | string | Quantity of the order |
-| price | string | Price of the position |
-| lossGain | string | Settlement profit/loss |
-| leverage | string | Leverage |
-| losscutPrice | string | Margin Liquidation |
-| timestamp | string | Executed timestamp |
-| msgType | string | Message Type:OPRUPRULRCPR |
+| Property Name | Value  | Description                         |
+|---------------|--------|-------------------------------------|
+| channel       | string | positionEvents                      |
+| positionId    | number | Position id                         |
+| symbol        | string | The handling margin symbols arehere |
+| side          | string | Side:BUYSELL                        |
+| size          | string | Quantity of the position            |
+| orderdSize    | string | Quantity of the order               |
+| price         | string | Price of the position               |
+| lossGain      | string | Settlement profit/loss              |
+| leverage      | string | Leverage                            |
+| losscutPrice  | string | Margin Liquidation                  |
+| timestamp     | string | Executed timestamp                  |
+| msgType       | string | Message Type:OPRUPRULRCPR           |
+
 - There is no Response when[unsubscribe]()is requested.
 
 ## Position Summary Notifications
@@ -17466,6 +17969,7 @@ ws.on("message", (data) => {
 });
 
 ```
+
 ```
 import json
 import websocket
@@ -17489,6 +17993,7 @@ ws.on_message = on_message
 ws.run_forever()
 
 ```
+
 ```
 package main
 
@@ -17519,6 +18024,7 @@ func main() {
 }
 
 ```
+
 ```
 require "faye/websocket"
 require "eventmachine"
@@ -17541,6 +18047,7 @@ EM.run {
 }
 
 ```
+
 ```
 import io.ktor.client.HttpClient
 import io.ktor.client.features.websocket.WebSockets
@@ -17576,6 +18083,7 @@ fun main() {
 }
 
 ```
+
 ```
 <?php
 
@@ -17606,6 +18114,7 @@ $connector("wss://api.coin.z.com/ws/private/v1/xxxxxxxxxxxxxxxxxxxx")->then(func
 $loop->run();
 
 ```
+
 ```
 #![deny(warnings)]
 
@@ -17629,6 +18138,7 @@ fn main() {
 }
 
 ```
+
 ```
 {-# LANGUAGE OverloadedStrings #-}
 
@@ -17664,6 +18174,7 @@ main :: IO ()
 main = withSocketsDo $ WSS.runSecureClient "api.coin.z.com" 443 "/ws/private/v1/xxxxxxxxxxxxxxxxxxxx" app
 
 ```
+
 ```
 using System;
 using System.Net.WebSockets;
@@ -17732,6 +18243,7 @@ class Example
 }
 
 ```
+
 ```
 import Foundation
 
@@ -17787,6 +18299,7 @@ dispatchGroup.notify(queue: .main) {
 dispatchMain()
 
 ```
+
 Response example:
 
 ```
@@ -17803,28 +18316,32 @@ Response example:
 }
 
 ```
-Receives latest position summary events notifications.After[subscribe](), latest position summary events notification will be sent.##### Parameters
+
+Receives latest position summary events notifications.After[subscribe](), latest position summary events notification
+will be sent.##### Parameters
 
 - Parameter type: JSON
-| Property Name | Type | Required | Available Values |
-| --- | --- | --- | --- |
-| command | string | Required | subscribeunsubscribe |
-| channel | string | Required | positionSummaryEvents |
-| option | string | Optional | PERIODIC*Ifoptionis specified, it will send data every 5 seconds.*If you request multiple subscriptions, only the latest request will be valid. |
+  | Property Name | Type | Required | Available Values |
+  | --- | --- | --- | --- |
+  | command | string | Required | subscribeunsubscribe |
+  | channel | string | Required | positionSummaryEvents |
+  | option | string | Optional | PERIODIC*Ifoptionis specified, it will send data every 5 seconds.*If you request
+  multiple subscriptions, only the latest request will be valid. |
 
 #### Response
 
-| Property Name | Value | Description |
-| --- | --- | --- |
-| channel | string | positionSummaryEvents |
-| symbol | string | The handling margin symbols arehere |
-| side | string | Side:BUYSELL |
-| averagePositionRate | string | Average price of the position |
-| positionLossGain | string | Settlement profit/loss |
-| sumOrderQuantity | string | Quantity of the order |
-| sumPositionQuantity | string | Quantity of the position |
-| timestamp | string | Timestamp of the notifications |
-| msgType | string | Message Type:INITUPDATEPERIODIC |
+| Property Name       | Value  | Description                         |
+|---------------------|--------|-------------------------------------|
+| channel             | string | positionSummaryEvents               |
+| symbol              | string | The handling margin symbols arehere |
+| side                | string | Side:BUYSELL                        |
+| averagePositionRate | string | Average price of the position       |
+| positionLossGain    | string | Settlement profit/loss              |
+| sumOrderQuantity    | string | Quantity of the order               |
+| sumPositionQuantity | string | Quantity of the position            |
+| timestamp           | string | Timestamp of the notifications      |
+| msgType             | string | Message Type:INITUPDATEPERIODIC     |
+
 - There is no Response when[unsubscribe]()is requested.
 
 # Historical Data
@@ -17855,21 +18372,23 @@ symbol: Trading symbol| Value | Description | Release date |
 | NAC | NOT A HOTEL COIN (Spot trading) | 2024/12/13 |
 
 ###
-| Value | Description | Release date |
-| --- | --- | --- |
-| BTC_JPY | Bitcoin-Japanese Yen (Margin trading) | 2018/09/05 |
-| ETH_JPY | Ethereum-Japanese Yen (Margin trading) | 2019/01/30 |
-| BCH_JPY | BitcoinCash-Japanese Yen (Margin trading) | 2019/01/30 |
-| LTC_JPY | Litecoin-Japanese Yen (Margin trading) | 2019/01/30 |
-| XRP_JPY | Ripple-Japanese Yen (Margin trading) | 2019/01/30 |
-| DOT_JPY | Polkadot-Japanese Yen (Margin trading) | 2024/04/13 |
-| ATOM_JPY | Cosmos-Japanese Yen (Margin trading) | 2024/04/13 |
-| ADA_JPY | Cardano-Japanese Yen (Margin trading) | 2024/04/13 |
-| LINK_JPY | Chainlink-Japanese Yen (Margin trading) | 2024/04/13 |
-| DOGE_JPY | Dogecoin-Japanese Yen (Margin trading) | 2024/04/13 |
-| SOL_JPY | Solana-Japanese Yen (Margin trading) | 2024/04/13 |
+
+| Value    | Description                               | Release date |
+|----------|-------------------------------------------|--------------|
+| BTC_JPY  | Bitcoin-Japanese Yen (Margin trading)     | 2018/09/05   |
+| ETH_JPY  | Ethereum-Japanese Yen (Margin trading)    | 2019/01/30   |
+| BCH_JPY  | BitcoinCash-Japanese Yen (Margin trading) | 2019/01/30   |
+| LTC_JPY  | Litecoin-Japanese Yen (Margin trading)    | 2019/01/30   |
+| XRP_JPY  | Ripple-Japanese Yen (Margin trading)      | 2019/01/30   |
+| DOT_JPY  | Polkadot-Japanese Yen (Margin trading)    | 2024/04/13   |
+| ATOM_JPY | Cosmos-Japanese Yen (Margin trading)      | 2024/04/13   |
+| ADA_JPY  | Cardano-Japanese Yen (Margin trading)     | 2024/04/13   |
+| LINK_JPY | Chainlink-Japanese Yen (Margin trading)   | 2024/04/13   |
+| DOGE_JPY | Dogecoin-Japanese Yen (Margin trading)    | 2024/04/13   |
+| SOL_JPY  | Solana-Japanese Yen (Margin trading)      | 2024/04/13   |
 
 ###
+
 symbol: Asset Ticker Symbol| Value | Description |
 | --- | --- |
 | JPY | Japanese Yen |
@@ -17901,113 +18420,120 @@ symbol: Asset Ticker Symbol| Value | Description |
 #### side: Side
 
 | Value | Description |
-| --- | --- |
-| BUY | Buy |
-| SELL | Sell |
+|-------|-------------|
+| BUY   | Buy         |
+| SELL  | Sell        |
 
 #### executionType: Execution Type
 
-| Value | Description |
-| --- | --- |
-| MARKET | Market order |
-| LIMIT | Limit order |
-| STOP | Stop limit order |
+| Value  | Description      |
+|--------|------------------|
+| MARKET | Market order     |
+| LIMIT  | Limit order      |
+| STOP   | Stop limit order |
 
 #### timeInForce: Time in force
 
-| Value | Description |
-| --- | --- |
-| FAK | Fill and kill. When an order can only be partially executed and its remaining part expires. |
-| FAS | Fill and store. When an order can only be partially executed and its remaining part is still valid. |
-| FOK | Fill or kill. If an order is not executed immediately, the order will expire. |
-| SOK | Store or kill. If a limit order is not maker, the order will expire. (Post-only order) |
+| Value | Description                                                                                         |
+|-------|-----------------------------------------------------------------------------------------------------|
+| FAK   | Fill and kill. When an order can only be partially executed and its remaining part expires.         |
+| FAS   | Fill and store. When an order can only be partially executed and its remaining part is still valid. |
+| FOK   | Fill or kill. If an order is not executed immediately, the order will expire.                       |
+| SOK   | Store or kill. If a limit order is not maker, the order will expire. (Post-only order)              |
 
 ## Symbols for which SOK(Post-Only) can be specified in the timeInForce parameter
 
-| Service | Description |
-| --- | --- |
-| Spot Trading | All symbols can be specified |
+| Service        | Description                                          |
+|----------------|------------------------------------------------------|
+| Spot Trading   | All symbols can be specified                         |
 | Margin Trading | BTC_JPYDOT_JPYATOM_JPYADA_JPYLINK_JPYDOGE_JPYSOL_JPY |
 
 ## HTTP Status Codes
 
-| Status Code | Description |
-| --- | --- |
-| 200 | A response for successful HTTP requests. |
-| 404 | A response for when requested URL is invalid. |
-| 503 | A response code that when WebSocket API is called while the service is in maintenance. |
+| Status Code | Description                                                                            |
+|-------------|----------------------------------------------------------------------------------------|
+| 200         | A response for successful HTTP requests.                                               |
+| 404         | A response for when requested URL is invalid.                                          |
+| 503         | A response code that when WebSocket API is called while the service is in maintenance. |
 
 ## Status Codes
 
-| Status Code | Description |
-| --- | --- |
-| 0 | A response for successful API processing. |
+| Status Code | Description                               |
+|-------------|-------------------------------------------|
+| 0           | A response for successful API processing. |
 
 ## Error Codes
 
-| Error Code | Description |
-| --- | --- |
-| ERR-70 | It will be returned when the BUY/SELL side of the specified position is incorrect in the settlement order. |
-| ERR-189 | The quantity of your close order exceeds your open position. |
-| ERR-200 | There are existing active orders and your order exceeds the maximum quantity that can be ordered. Please change the quantity to order orcancel an active orderin order to create a newclose order. |
-| ERR-201 | Insufficient funds. |
-| ERR-208 | The quantity of your order exceeds your available balance. Please check your balance or active orders. |
-| ERR-254 | The specified position does not exist. |
-| ERR-422 | It will be returned when the specified position does not exist in the close bulk order. Please make sure that the symbol or side (BUY/SELL) is correct. |
-| ERR-430 | Invalid parameter (orderId/executionId) in executions. |
-| ERR-554 | The server is unavalibale. |
-| ERR-626 | The server is busy. Please retry later. |
-| ERR-635 | The number of active orders has exceeded the limit. Pleasecancel an active orderto create a neworder. |
-| ERR-682 | A margin call has occurred. The operation cannot be executed. |
-| ERR-683 | Margin call processing is in progress. The operation cannot be executed. |
-| ERR-754 | Not enough transferable amount to transfer. |
-| ERR-846 | The difference between fromTimestamp and toTimestamp is greater than the maximum of 30 minutes. |
-| ERR-5003 | The API usage limits are exceeded. |
-| ERR-5007 | The API-TIMESTAMP is not set in the request header, or the value of API-TIMESTAMP is not a numeric value.Please ensure that the API-TIMESTAMP is set in the request header, and that the value is a numeric representation of a UNIX timestamp in milliseconds. |
-| ERR-5008 | The API-TIMESTAMP set in the request header is later than the system time of the API. Please try updating the system time. |
-| ERR-5009 | The API-TIMESTAMP set in the request header is earlier than the system time of the API. Please try updating the system time. |
-| ERR-5010 | The API-SIGN (Signature) is invalid. Please checkAuthentication. |
-| ERR-5011 | The API-KEY is empty. Please checkAuthentication. |
-| ERR-5012 | The API authentication is invalid. |
-| ERR-5014 | The membership agreement has not been completed. |
-| ERR-5106 | The request parameter is invalid. |
-| ERR-5111 | Invalid timeInForce values. Please see the possible timeInForce values inOrder,Close OrderandClose Bulk Order. |
-| ERR-5114 | The number of decimals exceeds the maximum precision. Please check the minimum order valuehere. |
-| ERR-5118 | Returned when LosscutPrice cannot be specified in the request body. |
-| ERR-5121 | Impossible to order due to order price is too low. |
-| ERR-5122 | The specified order can not be changed or canceled (already MODIFYING, CANCELLING, CANCELED, EXECUTED or EXPIRED). Orders can be changed or canceled only in ORDERED (WAITING for stop limit orders) status. |
-| ERR-5123 | The specified order doesn't exist. |
-| ERR-5125 | Returned when there is API restriction. |
-| ERR-5126 | The amount exceeds the maximum order amount or is less than the minimum order amount. Please check the trading ruleshere. |
-| ERR-5127 | Your API connection is restricted. |
-| ERR-5129 | Stop limit orders cannot be specified a price that will be executed immediately. |
-| ERR-5133 | Account transfers are not possible due to transfer restrictions. |
-| ERR-5135 | FxAccount not opened. Please try again ofter opening FxAccount. |
-| ERR-5201 | A response code that when Public/Private API is called while the service is in a regular maintenance. |
-| ERR-5202 | A response code that when Public/Private API is called while the service is in a emergency maintenance. |
-| ERR-5203 | A response code that when order or change order is called while the service is pre-open. |
-| ERR-5204 | The request API PATH is invalid. |
-| ERR-5206 | The limits of changing order for each order are exceeded. If you would like further changes for the order, pleasecancel the orderand create a brand neworder. |
-| ERR-5207 | Invalid symbol, interval or date values. |
-| ERR-5208 | OrderId(s) and executionId(s) cannot be used at the same time. |
+| Error Code | Description                                                                                                                                                                                                                                                     |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ERR-70     | It will be returned when the BUY/SELL side of the specified position is incorrect in the settlement order.                                                                                                                                                      |
+| ERR-189    | The quantity of your close order exceeds your open position.                                                                                                                                                                                                    |
+| ERR-200    | There are existing active orders and your order exceeds the maximum quantity that can be ordered. Please change the quantity to order orcancel an active orderin order to create a newclose order.                                                              |
+| ERR-201    | Insufficient funds.                                                                                                                                                                                                                                             |
+| ERR-208    | The quantity of your order exceeds your available balance. Please check your balance or active orders.                                                                                                                                                          |
+| ERR-254    | The specified position does not exist.                                                                                                                                                                                                                          |
+| ERR-422    | It will be returned when the specified position does not exist in the close bulk order. Please make sure that the symbol or side (BUY/SELL) is correct.                                                                                                         |
+| ERR-430    | Invalid parameter (orderId/executionId) in executions.                                                                                                                                                                                                          |
+| ERR-554    | The server is unavalibale.                                                                                                                                                                                                                                      |
+| ERR-626    | The server is busy. Please retry later.                                                                                                                                                                                                                         |
+| ERR-635    | The number of active orders has exceeded the limit. Pleasecancel an active orderto create a neworder.                                                                                                                                                           |
+| ERR-682    | A margin call has occurred. The operation cannot be executed.                                                                                                                                                                                                   |
+| ERR-683    | Margin call processing is in progress. The operation cannot be executed.                                                                                                                                                                                        |
+| ERR-754    | Not enough transferable amount to transfer.                                                                                                                                                                                                                     |
+| ERR-846    | The difference between fromTimestamp and toTimestamp is greater than the maximum of 30 minutes.                                                                                                                                                                 |
+| ERR-5003   | The API usage limits are exceeded.                                                                                                                                                                                                                              |
+| ERR-5007   | The API-TIMESTAMP is not set in the request header, or the value of API-TIMESTAMP is not a numeric value.Please ensure that the API-TIMESTAMP is set in the request header, and that the value is a numeric representation of a UNIX timestamp in milliseconds. |
+| ERR-5008   | The API-TIMESTAMP set in the request header is later than the system time of the API. Please try updating the system time.                                                                                                                                      |
+| ERR-5009   | The API-TIMESTAMP set in the request header is earlier than the system time of the API. Please try updating the system time.                                                                                                                                    |
+| ERR-5010   | The API-SIGN (Signature) is invalid. Please checkAuthentication.                                                                                                                                                                                                |
+| ERR-5011   | The API-KEY is empty. Please checkAuthentication.                                                                                                                                                                                                               |
+| ERR-5012   | The API authentication is invalid.                                                                                                                                                                                                                              |
+| ERR-5014   | The membership agreement has not been completed.                                                                                                                                                                                                                |
+| ERR-5106   | The request parameter is invalid.                                                                                                                                                                                                                               |
+| ERR-5111   | Invalid timeInForce values. Please see the possible timeInForce values inOrder,Close OrderandClose Bulk Order.                                                                                                                                                  |
+| ERR-5114   | The number of decimals exceeds the maximum precision. Please check the minimum order valuehere.                                                                                                                                                                 |
+| ERR-5118   | Returned when LosscutPrice cannot be specified in the request body.                                                                                                                                                                                             |
+| ERR-5121   | Impossible to order due to order price is too low.                                                                                                                                                                                                              |
+| ERR-5122   | The specified order can not be changed or canceled (already MODIFYING, CANCELLING, CANCELED, EXECUTED or EXPIRED). Orders can be changed or canceled only in ORDERED (WAITING for stop limit orders) status.                                                    |
+| ERR-5123   | The specified order doesn't exist.                                                                                                                                                                                                                              |
+| ERR-5125   | Returned when there is API restriction.                                                                                                                                                                                                                         |
+| ERR-5126   | The amount exceeds the maximum order amount or is less than the minimum order amount. Please check the trading ruleshere.                                                                                                                                       |
+| ERR-5127   | Your API connection is restricted.                                                                                                                                                                                                                              |
+| ERR-5129   | Stop limit orders cannot be specified a price that will be executed immediately.                                                                                                                                                                                |
+| ERR-5133   | Account transfers are not possible due to transfer restrictions.                                                                                                                                                                                                |
+| ERR-5135   | FxAccount not opened. Please try again ofter opening FxAccount.                                                                                                                                                                                                 |
+| ERR-5201   | A response code that when Public/Private API is called while the service is in a regular maintenance.                                                                                                                                                           |
+| ERR-5202   | A response code that when Public/Private API is called while the service is in a emergency maintenance.                                                                                                                                                         |
+| ERR-5203   | A response code that when order or change order is called while the service is pre-open.                                                                                                                                                                        |
+| ERR-5204   | The request API PATH is invalid.                                                                                                                                                                                                                                |
+| ERR-5206   | The limits of changing order for each order are exceeded. If you would like further changes for the order, pleasecancel the orderand create a brand neworder.                                                                                                   |
+| ERR-5207   | Invalid symbol, interval or date values.                                                                                                                                                                                                                        |
+| ERR-5208   | OrderId(s) and executionId(s) cannot be used at the same time.                                                                                                                                                                                                  |
 
 # Feedback
 
-We'd like to hear some feedback about our API. Your feedback will be carefully reviewed by our development team, to be developed and released sequentially.Please click[here](https://support.coin.z.com/hc/ja/requests/new?ticket_form_id=360002450434)to contact us about any requests you may have about the API.*Please click[here](https://support.coin.z.com/hc/ja/requests/new)to contact us about API inquiries. We may take some time to respond depending on the inquiry. Thank you for your understanding.# Changelog
+We'd like to hear some feedback about our API. Your feedback will be carefully reviewed by our development team, to be
+developed and released sequentially.Please
+click[here](https://support.coin.z.com/hc/ja/requests/new?ticket_form_id=360002450434)to contact us about any requests
+you may have about the API.*Please click[here](https://support.coin.z.com/hc/ja/requests/new)to contact us about API
+inquiries. We may take some time to respond depending on the inquiry. Thank you for your understanding.# Changelog
 
 ## 2025
 
 ### 2025-10-04New
 
-[The handling symbols](https://api.coin.z.com/docs/en/?rust#parameters-ref)- Removed the[symbol]():[MKR]()from the Parameter and Response section.
+[The handling symbols](https://api.coin.z.com/docs/en/?rust#parameters-ref)- Removed the[symbol]():[MKR]()from the
+Parameter and Response section.
 
 ### 2025-08-02New
 
-[Assets](https://api.coin.z.com/docs/en/?rust#assets)- Removed the[symbol]():[XEM]()[BAT]()[QTUM]()[ENJ]()[XYM]()[MONA]()from the Response section.
+[Assets](https://api.coin.z.com/docs/en/?rust#assets)- Removed
+the[symbol]():[XEM]()[BAT]()[QTUM]()[ENJ]()[XYM]()[MONA]()from the Response section.
 
 ### 2025-06-28
 
-[The handling symbols](https://api.coin.z.com/docs/en/?rust#parameters-ref)- Removed the[symbol]():[XEM]()[BAT]()[QTUM]()[ENJ]()[XYM]()[MONA]()from the Parameter and Response section.
+[The handling symbols](https://api.coin.z.com/docs/en/?rust#parameters-ref)- Removed
+the[symbol]():[XEM]()[BAT]()[QTUM]()[ENJ]()[XYM]()[MONA]()from the Parameter and Response section.
 
 ## 2024
 
@@ -18022,55 +18548,77 @@ Added: NOT A HOTEL COIN (Spot trading)- Added a new[symbol]():[NAC]()to the Para
 
 ### 2024-06-01
 
-The following symbols can now specify SOK(Post-Only) in the timeInForce parameter of[Order](https://api.coin.z.com/docs/en/?rust#order)and[Close Order](https://api.coin.z.com/docs/en/?rust#close-order).- [DOT_JPY]()[ATOM_JPY]()[ADA_JPY]()[LINK_JPY]()[DOGE_JPY]()[SOL_JPY]()
+The following symbols can now specify SOK(Post-Only) in the timeInForce parameter
+of[Order](https://api.coin.z.com/docs/en/?rust#order)
+and[Close Order](https://api.coin.z.com/docs/en/?rust#close-order).- [DOT_JPY]()[ATOM_JPY]()[ADA_JPY]()[LINK_JPY]()[DOGE_JPY]()[SOL_JPY]()
 
 ### 2024-04-13
 
-Added: Polkadot, Cosmos, Cardano, Chainlink, Dogecoin and Solana (Margin trading)- Added a new[symbol]():[DOT_JPY]()[ATOM_JPY]()[ADA_JPY]()[LINK_JPY]()[DOGE_JPY]()[SOL_JPY]()to the Parameter and Response section.
+Added: Polkadot, Cosmos, Cardano, Chainlink, Dogecoin and Solana (Margin trading)- Added a
+new[symbol]():[DOT_JPY]()[ATOM_JPY]()[ADA_JPY]()[LINK_JPY]()[DOGE_JPY]()[SOL_JPY]()to the Parameter and Response
+section.
 
 ### 2024-03-02
 
-[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Trading volume requirements for Tier 2 has been increased from from 100 million to over 1 billion.
+[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Trading volume
+requirements for Tier 2 has been increased from from 100 million to over 1 billion.
+
 - Tier2: Maximum 30 POST GET API requests per second for the same account.
 
-[Fiat(JPY) deposit history](https://api.coin.z.com/docs/en/?rust#fiatDepositHistory)has been released[Fiat(JPY) withdrawal history](https://api.coin.z.com/docs/en/?rust#fiatWithdrawalHistory)has been released[CryptoCurrency deposit history](https://api.coin.z.com/docs/en/?rust#depositHistory)has been released[CryptoCurrency withdrawal history](https://api.coin.z.com/docs/en/?rust#withdrawalHistory)has been released## 2023
+[Fiat(JPY) deposit history](https://api.coin.z.com/docs/en/?rust#fiatDepositHistory)has been
+released[Fiat(JPY) withdrawal history](https://api.coin.z.com/docs/en/?rust#fiatWithdrawalHistory)has been
+released[CryptoCurrency deposit history](https://api.coin.z.com/docs/en/?rust#depositHistory)has been
+released[CryptoCurrency withdrawal history](https://api.coin.z.com/docs/en/?rust#withdrawalHistory)has been released##
+2023
 
 ### 2023-12-16
 
-The samples have been updated to correspond to the latest versions of each language as of December 16, 2023.### 2023-12-09
+The samples have been updated to correspond to the latest versions of each language as of December 16, 2023.###
+2023-12-09
 
-[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Tier1: Maximum 20 POST GET API requests per second for the same account.
+[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Tier1: Maximum 20 POST
+GET API requests per second for the same account.
 
 ### 2023-10-28
 
-Added: New[Transfer](https://api.coin.z.com/docs/en/?rust#transfer)has been released.[Margin](https://api.coin.z.com/docs/en/?rust#margin)- Added a new : transferableAmount to the Response section.
+Added: New[Transfer](https://api.coin.z.com/docs/en/?rust#transfer)has been
+released.[Margin](https://api.coin.z.com/docs/en/?rust#margin)- Added a new : transferableAmount to the Response
+section.
 
 ### 2023-10-21
 
-[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Trading volume requirements for Tier 2 has been reduced from 1 billion to over 100 million.
+[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Trading volume
+requirements for Tier 2 has been reduced from 1 billion to over 100 million.
+
 - Tier1: Maximum 10 POST GET API requests per second for the same account.
 - Tier2: Maximum 20 POST GET API requests per second for the same account.
 
 ### 2023-09-16
 
-[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new[cancelType]():[EXPIRED_SELFTRADE]()to the Response section.
-[Order Notifications](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a new[cancelType]():[EXPIRED_SELFTRADE]()to the Response section.
+[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new[cancelType]():[EXPIRED_SELFTRADE]()to the Response
+section.
+[Order Notifications](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a
+new[cancelType]():[EXPIRED_SELFTRADE]()to the Response section.
 
 ### 2023-08-05
 
-Added: Dogecoin (Spot trading),Solana (Spot trading)- Added a new[symbol]():[DOGE]()[SOL]()to the Parameter and Response section.
+Added: Dogecoin (Spot trading),Solana (Spot trading)- Added a new[symbol]():[DOGE]()[SOL]()to the Parameter and Response
+section.
 
 ### 2023-07-29
 
-[The handling symbols](https://api.coin.z.com/docs/en/?rust#parameters-ref)- Removed the[symbol]():[OMG]()from the Parameter and Response section.
+[The handling symbols](https://api.coin.z.com/docs/en/?rust#parameters-ref)- Removed the[symbol]():[OMG]()from the
+Parameter and Response section.
 
 ### 2023-07-08
 
-[Assets](https://api.coin.z.com/docs/en/?rust#assets)- Added a new[symbol]():[FIL]()[SAND]()[CHZ]()to the Response section.
+[Assets](https://api.coin.z.com/docs/en/?rust#assets)- Added a new[symbol]():[FIL]()[SAND]()[CHZ]()to the Response
+section.
 
 ### 2023-05-13
 
-[Trading Volume](https://api.coin.z.com/docs/en/?rust#tradingVolume)- Added new TradingVolume properties: TakerFee and MakerFee.
+[Trading Volume](https://api.coin.z.com/docs/en/?rust#tradingVolume)- Added new TradingVolume properties: TakerFee and
+MakerFee.
 
 ### 2023-03-22
 
@@ -18091,7 +18639,8 @@ Added: New[Trade rules](https://api.coin.z.com/docs/en/?rust#symbols)has been re
 
 ### 2022-07-13
 
-Added: Maker, Dai, Cardano and Chainlink (Spot trading)- Added a new[symbol]():[MKR]()[DAI]()[ADA]()[LINK]()to the Parameter and Response section.
+Added: Maker, Dai, Cardano and Chainlink (Spot trading)- Added a new[symbol]():[MKR]()[DAI]()[ADA]()[LINK]()to the
+Parameter and Response section.
 
 ### 2022-07-06
 
@@ -18099,7 +18648,8 @@ Added: Maker, Dai, Cardano and Chainlink (Spot trading)- Added a new[symbol]():[
 
 ### 2022-06-08
 
-Added: OMG, Tezos, Enjin Coin, Polkadot and Cosmos (Spot trading)- Added a new[symbol]():[OMG]()[XTZ]()[ENJ]()[DOT]()[ATOM]()to the Parameter and Response section.
+Added: OMG, Tezos, Enjin Coin, Polkadot and Cosmos (Spot trading)- Added a
+new[symbol]():[OMG]()[XTZ]()[ENJ]()[DOT]()[ATOM]()to the Parameter and Response section.
 
 ### 2022-05-18
 
@@ -18108,11 +18658,13 @@ Added: FCR Coin (Spot trading)- Added a new[symbol]():[FCR]()to the Parameter an
 
 ### 2022-04-08
 
-[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Trading volume requirements for Tier 2 has been reduced from 2 billion to over 1 billion.
+[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Trading volume
+requirements for Tier 2 has been reduced from 2 billion to over 1 billion.
 
 ### 2022-03-30
 
-Added: Basic Attention Token (Spot trading) and  Qtum (Spot trading)- Added a new[symbol]():[BAT]()[QTUM]()to the Parameter and Response section.
+Added: Basic Attention Token (Spot trading) and Qtum (Spot trading)- Added a new[symbol]():[BAT]()[QTUM]()to the
+Parameter and Response section.
 
 ### 2022-03-02
 
@@ -18124,7 +18676,8 @@ Added: Basic Attention Token (Spot trading) and  Qtum (Spot trading)- Added a ne
 
 ### 2022-01-27
 
-[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Current week's private API limits are based on the trading volume from the previous week.
+[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Current week's private
+API limits are based on the trading volume from the previous week.
 
 Added: New[Trading volume](https://api.coin.z.com/docs/en/?rust#tradingVolume)has been released.### 2022-01-26
 
@@ -18143,13 +18696,15 @@ Added: Symbol (Spot trading)- Added a new[symbol]():[XYM]()to the Parameter and 
 ### 2021-09-22
 
 [Executions](https://api.coin.z.com/docs/en/?rust#executions)- Added a new Executions property:positionIdto Response
-[Latest Executions](https://api.coin.z.com/docs/en/?rust#latest-executions)- Added a new LatestExecutions property:positionIdto Response
+[Latest Executions](https://api.coin.z.com/docs/en/?rust#latest-executions)- Added a new LatestExecutions property:
+positionIdto Response
 
 ### 2021-09-08
 
 [Order](https://api.coin.z.com/docs/en/?rust#order)- Added a new[timeInForce]():[FAK]()into the Limit order.
 [Close Order](https://api.coin.z.com/docs/en/?rust#close-order)- Added a new[timeInForce]():[FAK]()into the Limit order.
-[Close Bulk Order](https://api.coin.z.com/docs/en/?rust#close-bulk-order)- Added a new[timeInForce]():[FAK]()into the Limit order.
+[Close Bulk Order](https://api.coin.z.com/docs/en/?rust#close-bulk-order)- Added a new[timeInForce]():[FAK]()into the
+Limit order.
 
 ### 2021-08-18
 
@@ -18169,7 +18724,9 @@ Added: NEM (Spot trading)- Added a new[symbol]():[XEM]()to the Parameter and Res
 
 ### 2021-05-26
 
-[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Maximum 6 GET API requests per second for the same account.
+[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Maximum 6 GET API
+requests per second for the same account.
+
 - Maximum 6 GET API requests per second for the same account.
 
 ### 2021-05-19
@@ -18179,8 +18736,10 @@ Added: NEM (Spot trading)- Added a new[symbol]():[XEM]()to the Parameter and Res
 ### 2021-04-21
 
 [Margin](https://api.coin.z.com/docs/en/?rust#margin)- Added a new response property:marginCallStatus
-[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new[cancelType]():[MARGIN_CALL]()[MARGIN_CALL_LOSSCUT]()to the Response section.
-[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a new[cancelType]():[MARGIN_CALL]()[MARGIN_CALL_LOSSCUT]()to the Response section.
+[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new[cancelType]():[MARGIN_CALL]()[MARGIN_CALL_LOSSCUT]()
+to the Response section.
+[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a
+new[cancelType]():[MARGIN_CALL]()[MARGIN_CALL_LOSSCUT]()to the Response section.
 
 ### 2021-04-15
 
@@ -18192,7 +18751,9 @@ Added: New[KLine Data](https://api.coin.z.com/docs/en/?rust#klines)has been rele
 
 ### 2020-12-16
 
-[Executions](https://api.coin.z.com/docs/en/?rust#executions)- Now you can request multiple executions at once by using a comma-separated list of execution ids.- Changed the type of parameter: executionId from number to string.
+[Executions](https://api.coin.z.com/docs/en/?rust#executions)- Now you can request multiple executions at once by using
+a comma-separated list of execution ids.- Changed the type of parameter: executionId from number to string.
+
 - The maximum number of execution ids is 10.
 
 ### 2020-12-09
@@ -18202,39 +18763,59 @@ Added: New[KLine Data](https://api.coin.z.com/docs/en/?rust#klines)has been rele
 
 ### 2020-11-04
 
-[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Now you can request multiple orders at once by using a comma-separated list of order ids.- Changed the type of parameter: orderId from number to string.
+[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Now you can request multiple orders at once by using a
+comma-separated list of order ids.- Changed the type of parameter: orderId from number to string.
+
 - The maximum number of order ids is 10.
 
-Added: New[Private API](https://api.coin.z.com/docs/en/?rust#authentication-private):[CancelOrders](https://api.coin.z.com/docs/en/?rust#cancel-orders)has been released.Added: New[Private API](https://api.coin.z.com/docs/en/?rust#authentication-private):[CancelBulkOrder](https://api.coin.z.com/docs/en/?rust#cancel-bulk-order)has been released.### 2020-09-09
+Added:
+New[Private API](https://api.coin.z.com/docs/en/?rust#authentication-private):[CancelOrders](https://api.coin.z.com/docs/en/?rust#cancel-orders)
+has been released.Added:
+New[Private API](https://api.coin.z.com/docs/en/?rust#authentication-private):[CancelBulkOrder](https://api.coin.z.com/docs/en/?rust#cancel-bulk-order)
+has been released.### 2020-09-09
 
-[Create Access Token](https://api.coin.z.com/docs/en/?rust#ws-auth-post)- Changed the maximum number of tokens of[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api)from 1 to 5.
-- If the number of issued tokens exceeds the maximum number of tokens, the tokens will be deleted in order of expiration time.
+[Create Access Token](https://api.coin.z.com/docs/en/?rust#ws-auth-post)- Changed the maximum number of tokens
+of[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api)from 1 to 5.
+
+- If the number of issued tokens exceeds the maximum number of tokens, the tokens will be deleted in order of expiration
+  time.
 
 ### 2020-09-02
 
 [Order](https://api.coin.z.com/docs/en/?rust#order)- Added a new Order parameter:timeInForce
 [Close Order](https://api.coin.z.com/docs/en/?rust#close-order)- Added a new Order parameter:timeInForce
 [Close Bulk Order](https://api.coin.z.com/docs/en/?rust#close-bulk-order)- Added a new Order parameter:timeInForce
-[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new[cancelType]():[EXPIRED_FAK]()[EXPIRED_FOK]()[EXPIRED_SOK]()to the Response section.
+[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a
+new[cancelType]():[EXPIRED_FAK]()[EXPIRED_FOK]()[EXPIRED_SOK]()to the Response section.
+
 - Added a new[timeInForce]():[FOK]()[SOK]()to the Response section.
-[Active Orders](https://api.coin.z.com/docs/en/?rust#active-orders)- Added a new[timeInForce]():[FOK]()[SOK]()to the Response section.
-[Execution Notifications](https://api.coin.z.com/docs/en/?rust#ws-execution-events)- Added a new[timeInForce]():[FOK]()[SOK]()to the Response section.
-[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a new[cancelType]():[EXPIRED_FAK]()[EXPIRED_FOK]()[EXPIRED_SOK]()[CLOSED_ORDER]()[PRICE_LIMIT]()[SOK_TAKER]()to the Response section.
+  [Active Orders](https://api.coin.z.com/docs/en/?rust#active-orders)- Added a new[timeInForce]():[FOK]()[SOK]()to the
+  Response section.
+  [Execution Notifications](https://api.coin.z.com/docs/en/?rust#ws-execution-events)- Added a
+  new[timeInForce]():[FOK]()[SOK]()to the Response section.
+  [Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a
+  new[cancelType]():[EXPIRED_FAK]()[EXPIRED_FOK]()[EXPIRED_SOK]()[CLOSED_ORDER]()[PRICE_LIMIT]()[SOK_TAKER]()to the
+  Response section.
 - Added a new[timeInForce]():[FOK]()[SOK]()to the Response section.
 
 ### 2020-08-12
 
-[Position Summary Notifications](https://api.coin.z.com/docs/en/?rust#ws-position-summary-events)- Added a new Position Summary Notifications parameter:option
+[Position Summary Notifications](https://api.coin.z.com/docs/en/?rust#ws-position-summary-events)- Added a new Position
+Summary Notifications parameter:option
+
 - Added a new response property:msgType
 
 ### 2020-08-05
 
-[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new[cancelType]():[INSUFFICIENT_BALANCE]()[INSUFFICIENT_MARGIN]()[ACCOUNT_LOSSCUT]()to the Response section.
-[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a new[cancelType]():[INSUFFICIENT_BALANCE]()[INSUFFICIENT_MARGIN]()[ACCOUNT_LOSSCUT]()to the Response section.
+[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a
+new[cancelType]():[INSUFFICIENT_BALANCE]()[INSUFFICIENT_MARGIN]()[ACCOUNT_LOSSCUT]()to the Response section.
+[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a
+new[cancelType]():[INSUFFICIENT_BALANCE]()[INSUFFICIENT_MARGIN]()[ACCOUNT_LOSSCUT]()to the Response section.
 
 ### 2020-07-28
 
-Added: New[Historical Data](https://api.coin.z.com/docs/en/?rust#historical_data)has been released.- You can download the historical data (.CSV file).
+Added: New[Historical Data](https://api.coin.z.com/docs/en/?rust#historical_data)has been released.- You can download
+the historical data (.CSV file).
 
 ### 2020-07-15
 
@@ -18242,45 +18823,68 @@ Added: New[Historical Data](https://api.coin.z.com/docs/en/?rust#historical_data
 
 ### 2020-07-08
 
-Added: New[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api):[Position Summary Notifications](https://api.coin.z.com/docs/en/?rust#ws-position-summary-events)has been released.- To use the API with the existing API keys, open your membership site > API > 編集 (Edit) > APIキーの編集 (API key setting) screen and click "約定情報通知(WebSocket)" (Execution Notifications), "注文情報通知(WebSocket)" (Order Notifications), "ポジション情報通知(WebSocket)" (Position Notifications) or "ポジション情報通知(WebSocket)" (Position Summary Notifications) to call the Create Access Token API.
+Added:
+New[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api):[Position Summary Notifications](https://api.coin.z.com/docs/en/?rust#ws-position-summary-events)
+has been released.- To use the API with the existing API keys, open your membership site > API > 編集 (Edit) >
+APIキーの編集 (API key setting) screen and click "約定情報通知(WebSocket)" (Execution Notifications), "注文情報通知(
+WebSocket)" (Order Notifications), "ポジション情報通知(WebSocket)" (Position Notifications) or "ポジション情報通知(
+WebSocket)" (Position Summary Notifications) to call the Create Access Token API.
 
 ### 2020-06-24
 
 [Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new response property:cancelType
-[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a new response property:cancelType
+[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a new
+response property:cancelType
 
 ### 2020-05-27
 
 [Change Order](https://api.coin.z.com/docs/en/?rust#change-order)- Added a new Change Order parameter:losscutPrice
 [Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new response property:losscutPrice
 [Active Orders](https://api.coin.z.com/docs/en/?rust#active-orders)- Added a new response property:losscutPrice
-[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a new response property:losscutPrice
+[Order Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-order-events)- Added a new
+response property:losscutPrice
 
 ### 2020-04-28
 
-Added: New[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api):[Position Notifications](https://api.coin.z.com/docs/en/?rust#ws-position-events)has been released.- To use the API with the existing API keys, open your membership site > API > 編集 (Edit) > APIキーの編集 (API key setting) screen and click "約定情報通知(WebSocket)" (Execution Notifications), "注文情報通知(WebSocket)" (Order Notifications) or "ポジション情報通知(WebSocket)" (Position Notifications) to call the Create Access Token API.
+Added:
+New[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api):[Position Notifications](https://api.coin.z.com/docs/en/?rust#ws-position-events)
+has been released.- To use the API with the existing API keys, open your membership site > API > 編集 (Edit) >
+APIキーの編集 (API key setting) screen and click "約定情報通知(WebSocket)" (Execution Notifications), "注文情報通知(
+WebSocket)" (Order Notifications) or "ポジション情報通知(WebSocket)" (Position Notifications) to call the Create Access
+Token API.
 
 ### 2020-04-08
 
-[Order Books (Public WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-orderbooks)- Added a new response property:timestamp
+[Order Books (Public WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-orderbooks)- Added a new response property:
+timestamp
 
 ### 2020-04-01
 
-[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Private API limits for GET and POST method are now separated.- Maximum 3 GET API requests per second for the same account.
+[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Private API limits for
+GET and POST method are now separated.- Maximum 3 GET API requests per second for the same account.
+
 - Maximum 3 POST API requests per second for the same account.
 
 ### 2020-02-26
 
-Added: New[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api):[Order Notifications](https://api.coin.z.com/docs/en/?rust#ws-order-events)has been released.- To use the API with the existing API keys, open your membership site > API > 編集 (Edit) > APIキーの編集 (API key setting) screen and click "約定情報通知(WebSocket)" (Execution Notifications) or "注文情報通知(WebSocket)" (Order Notifications) to call the Create Access Token API.
-[Execution Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-execution-events)- Added a new response property:msgType
+Added:
+New[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api):[Order Notifications](https://api.coin.z.com/docs/en/?rust#ws-order-events)
+has been released.- To use the API with the existing API keys, open your membership site > API > 編集 (Edit) >
+APIキーの編集 (API key setting) screen and click "約定情報通知(WebSocket)" (Execution Notifications) or "注文情報通知(
+WebSocket)" (Order Notifications) to call the Create Access Token API.
+[Execution Notifications (Private WebSocket API)](https://api.coin.z.com/docs/en/?rust#ws-execution-events)- Added a new
+response property:msgType
 Added a new section:[Feedback](https://api.coin.z.com/docs/en/?rust#feedback)page### 2020-02-12
 
 Request example- Request example of Swift has been added.
+
 - WebSocket4Net version of C# request example has been added.
 
 ### 2020-01-23
 
-[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api)version v1 has been released.[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Added: Private WebSocket API Limiting- Description of API usage restriction of Private WebSocket API to Limits section has been added.
+[Private WebSocket API](https://api.coin.z.com/docs/en/?rust#private-ws-api)version v1 has been
+released.[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Added: Private WebSocket API Limiting-
+Description of API usage restriction of Private WebSocket API to Limits section has been added.
 
 ## 2019
 
@@ -18292,41 +18896,83 @@ Request example- Request example of Swift has been added.
 
 Added: English version of API documentation has been released.### 2019-10-23
 
-Added: Stop limit order.- Please note that meaning of order status`WAITING`will be valid and`ORDERED`will be partially executed for stop limit orders.
+Added: Stop limit order.- Please note that meaning of order status`WAITING`will be valid and`ORDERED`will be partially
+executed for stop limit orders.
 [Order](https://api.coin.z.com/docs/en/?rust#order)- Added a new[executionType]():[STOP]()to the Parameter section.
+
 - Added a description of[price]()to the Parameter section.
-[Close Order](https://api.coin.z.com/docs/en/?rust#close-order)- Added a new[executionType]():[STOP]()to the Parameter section.
+  [Close Order](https://api.coin.z.com/docs/en/?rust#close-order)- Added a new[executionType]():[STOP]()to the Parameter
+  section.
 - Added a description of[price]()to the Parameter section.
-[Close Bulk Order](https://api.coin.z.com/docs/en/?rust#close-bulk-order)- Added a new[executionType]():[STOP]()to the Parameter section.
+  [Close Bulk Order](https://api.coin.z.com/docs/en/?rust#close-bulk-order)- Added a new[executionType]():[STOP]()to the
+  Parameter section.
 - Added a description of[price]()to the Parameter section.
-[Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new[executionType]():[STOP]()to the Parameter section.
+  [Orders](https://api.coin.z.com/docs/en/?rust#orders)- Added a new[executionType]():[STOP]()to the Parameter section.
 - Added a description of[status]()to the Parameter section.
-[Active Orders](https://api.coin.z.com/docs/en/?rust#active-orders)- Added a new[executionType]():[STOP]()to the Parameter section.
+  [Active Orders](https://api.coin.z.com/docs/en/?rust#active-orders)- Added a new[executionType]():[STOP]()to the
+  Parameter section.
 - Changed the description of[status]()in the Response section.
 
 ### 2019-10-02
 
-Added: New[Public WebSocket API](https://api.coin.z.com/docs/en/?rust#public-ws-api):[Trades](https://api.coin.z.com/docs/en/?rust#ws-trades)has been released.### 2019-09-18
+Added:
+New[Public WebSocket API](https://api.coin.z.com/docs/en/?rust#public-ws-api):[Trades](https://api.coin.z.com/docs/en/?rust#ws-trades)
+has been released.### 2019-09-18
 
 Request example of C#, Rust, and Haskell has been added.### 2019-09-11
 
 Request example of Go, Ruby, PHP, and Kotlin has been added.### 2019-08-28
 
-[Public WebSocket API](https://api.coin.z.com/docs/en/?rust#public-ws-api)version v1 has been released.[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Added: Public WebSocket API limits- Description of API usage restriction of Public WebSocket API to Limits section has been added.
+[Public WebSocket API](https://api.coin.z.com/docs/en/?rust#public-ws-api)version v1 has been
+released.[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Added: Public WebSocket API limits-
+Description of API usage restriction of Public WebSocket API to Limits section has been added.
 
 ### 2019-07-03
 
-[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Private API limits are changed to once per 300 milliseconds.
+[API Limiting](https://api.coin.z.com/docs/en/?rust#restrictions)- Changed: Private API limits- Private API limits are
+changed to once per 300 milliseconds.
 
 ### 2019-06-12
 
-[GET /public/v1/ticker](https://api.coin.z.com/docs/en/?rust#ticker)- Changed: Symbol parameter is changed from required to optional- If symbol is not specified, now it returns all symbols' rates.
+[GET /public/v1/ticker](https://api.coin.z.com/docs/en/?rust#ticker)- Changed: Symbol parameter is changed from required
+to optional- If symbol is not specified, now it returns all symbols' rates.
 
 ### 2019-05-29
 
-Version v1 has been released.[Node.js](https://api.coin.z.com/docs/en/?rust#)[Python](https://api.coin.z.com/docs/en/?rust#)[Go](https://api.coin.z.com/docs/en/?rust#)[Ruby](https://api.coin.z.com/docs/en/?rust#)[PHP](https://api.coin.z.com/docs/en/?rust#)[Kotlin](https://api.coin.z.com/docs/en/?rust#)[C#](https://api.coin.z.com/docs/en/?rust#)[Rust](https://api.coin.z.com/docs/en/?rust#)[Haskell](https://api.coin.z.com/docs/en/?rust#)[Swift](https://api.coin.z.com/docs/en/?rust#)!function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1",a.queue=[],b=e.createElement(f),b.async=!0,b.src="https://static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(window,document,"script");twq("config","nxxla");"/jp/index.html"!==window.location.pathname&&"/jp/"!==window.location.pathname&&"/jp/corp/about/campaign/201708-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/201708-02.html"!==window.location.pathname&&"/jp/corp/about/campaign/201708-03.html"!==window.location.pathname&&"/jp/corp/ad/btc/fx/"!==window.location.pathname&&"/jp/corp/ad/btc/trade/"!==window.location.pathname&&"/jp/corp/guide/flow/"!==window.location.pathname&&"/jp/corp/lp/spot/"!==window.location.pathname&&"/jp/corp/lp/fx/"!==
-window.location.pathname&&"/jp/corp/lp/general/"!==window.location.pathname&&"/jp/corp/lp/general01/"!==window.location.pathname&&"/jp/corp/about/security/"!==window.location.pathname&&"/jp/corp/information/btc/"!==window.location.pathname&&"/jp/corp/information/xrp/"!==window.location.pathname&&"/jp/corp/product/info/spot/"!==window.location.pathname&&"/jp/corp/product/info/margin/"!==window.location.pathname&&"/jp/corp/about/campaign/"!==window.location.pathname&&"/jp/corp/guide/reason/"!==window.location.pathname&&
-"/jp/corp/product/info/fx/"!==window.location.pathname&&"/jp/member/signup"!==window.location.pathname&&"/jp/corp/information/column/20171130/"!==window.location.pathname&&"/jp/corp/information/column/20171229/"!==window.location.pathname&&"/jp/corp/information/column/20180131/"!==window.location.pathname&&"/jp/corp/information/column/20180228/"!==window.location.pathname&&"/jp/corp/product/cryptocurrency/"!==window.location.pathname&&"/jp/corp/about/campaign/201810-01.html"!==window.location.pathname&&
-"/jp/corp/about/campaign/201903-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/201906-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/201908-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/201909-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/201911-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202012-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202103-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202106-01.html"!==
-window.location.pathname&&"/jp/corp/about/campaign/202107-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202108-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202112-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202204-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202204-02.html"!==window.location.pathname&&"/jp/corp/about/campaign/202303-04.html"!==window.location.pathname&&"/jp/corp/about/campaign/202304-01.html"!==window.location.pathname&&
-"/jp/corp/information/column/"!==window.location.pathname&&"/jp/recaptest.html"!==window.location.pathname&&"/jp/corp/lp/click-sec/"!==window.location.pathname&&"/jp/corp/about/campaign/202212-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202312-01.html"!==window.location.pathname||setAid();window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"ycl_cookie"});window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"yss_retargeting",config:{yahoo_ss_retargeting_id:"1000390221",yahoo_sstag_custom_params:{}}});
+Version v1 has been
+released.[Node.js](https://api.coin.z.com/docs/en/?rust#)[Python](https://api.coin.z.com/docs/en/?rust#)[Go](https://api.coin.z.com/docs/en/?rust#)[Ruby](https://api.coin.z.com/docs/en/?rust#)[PHP](https://api.coin.z.com/docs/en/?rust#)[Kotlin](https://api.coin.z.com/docs/en/?rust#)[C#](https://api.coin.z.com/docs/en/?rust#)[Rust](https://api.coin.z.com/docs/en/?rust#)[Haskell](https://api.coin.z.com/docs/en/?rust#)[Swift](https://api.coin.z.com/docs/en/?rust#)!
+function(d,e,f,a,b,c){d.twq||(a=d.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1.1"
+,a.queue=[],b=e.createElement(f),b.async=!
+0,b.src="https://static.ads-twitter.com/uwt.js",c=e.getElementsByTagName(f)[0],c.parentNode.insertBefore(b,c))}(
+window,document,"script");twq("config","nxxla");"/jp/index.html"!==window.location.pathname&&"/jp/"!
+==window.location.pathname&&"/jp/corp/about/campaign/201708-01.html"!==window.location.pathname&&"
+/jp/corp/about/campaign/201708-02.html"!==window.location.pathname&&"/jp/corp/about/campaign/201708-03.html"!
+==window.location.pathname&&"/jp/corp/ad/btc/fx/"!==window.location.pathname&&"/jp/corp/ad/btc/trade/"!
+==window.location.pathname&&"/jp/corp/guide/flow/"!==window.location.pathname&&"/jp/corp/lp/spot/"!
+==window.location.pathname&&"/jp/corp/lp/fx/"!==
+window.location.pathname&&"/jp/corp/lp/general/"!==window.location.pathname&&"/jp/corp/lp/general01/"!
+==window.location.pathname&&"/jp/corp/about/security/"!==window.location.pathname&&"/jp/corp/information/btc/"!
+==window.location.pathname&&"/jp/corp/information/xrp/"!==window.location.pathname&&"/jp/corp/product/info/spot/"!
+==window.location.pathname&&"/jp/corp/product/info/margin/"!==window.location.pathname&&"/jp/corp/about/campaign/"!
+==window.location.pathname&&"/jp/corp/guide/reason/"!==window.location.pathname&&
+"/jp/corp/product/info/fx/"!==window.location.pathname&&"/jp/member/signup"!==window.location.pathname&&"
+/jp/corp/information/column/20171130/"!==window.location.pathname&&"/jp/corp/information/column/20171229/"!
+==window.location.pathname&&"/jp/corp/information/column/20180131/"!==window.location.pathname&&"
+/jp/corp/information/column/20180228/"!==window.location.pathname&&"/jp/corp/product/cryptocurrency/"!
+==window.location.pathname&&"/jp/corp/about/campaign/201810-01.html"!==window.location.pathname&&
+"/jp/corp/about/campaign/201903-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/201906-01.html"!
+==window.location.pathname&&"/jp/corp/about/campaign/201908-01.html"!==window.location.pathname&&"
+/jp/corp/about/campaign/201909-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/201911-01.html"!
+==window.location.pathname&&"/jp/corp/about/campaign/202012-01.html"!==window.location.pathname&&"
+/jp/corp/about/campaign/202103-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202106-01.html"!==
+window.location.pathname&&"/jp/corp/about/campaign/202107-01.html"!==window.location.pathname&&"
+/jp/corp/about/campaign/202108-01.html"!==window.location.pathname&&"/jp/corp/about/campaign/202112-01.html"!
+==window.location.pathname&&"/jp/corp/about/campaign/202204-01.html"!==window.location.pathname&&"
+/jp/corp/about/campaign/202204-02.html"!==window.location.pathname&&"/jp/corp/about/campaign/202303-04.html"!
+==window.location.pathname&&"/jp/corp/about/campaign/202304-01.html"!==window.location.pathname&&
+"/jp/corp/information/column/"!==window.location.pathname&&"/jp/recaptest.html"!==window.location.pathname&&"
+/jp/corp/lp/click-sec/"!==window.location.pathname&&"/jp/corp/about/campaign/202212-01.html"!
+==window.location.pathname&&"/jp/corp/about/campaign/202312-01.html"!==window.location.pathname||setAid()
+;window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"ycl_cookie"})
+;window.yjDataLayer=window.yjDataLayer||[];function ytag(){yjDataLayer.push(arguments)}ytag({type:"yss_retargeting"
+,config:{yahoo_ss_retargeting_id:"1000390221",yahoo_sstag_custom_params:{}}});
