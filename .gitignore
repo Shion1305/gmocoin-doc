@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+website/node_modules/
+
+# Build output
+website/build/
+website/.docusaurus/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+docs/
+temp/
+tmp/
