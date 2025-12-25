@@ -28,6 +28,6 @@ pnpm-debug.log*
 Thumbs.db
 
 # Temporary
-docs/
+/docs/
 temp/
 tmp/
